@@ -1,4 +1,4 @@
-console.log(`// // // // // // 6. String // // // // // //`);
+console.log(`-------------- 6. String --------------`);
 // String Indexing
 console.log(`>> String Indexing`);
 let firstName = "Shubham";
@@ -108,7 +108,7 @@ let myNumberTwo = 123;
 console.log(myNumberOne + myNumberTwo); */ // Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
 
 
-console.log(`// // // // // // 7. == v === // // // // // //`);
+console.log(`-------------- 7. == v === --------------`);
 let num1 = 7; // typeOf number
 let num2 = 7; // typeOf number
 console.log(num1 == num2);
@@ -120,7 +120,7 @@ console.log(numberOne == numberTwo);
 console.log(numberOne === numberTwo);
 
 
-console.log(`// // // // // // 8. Ternary Operator // // // // // //`);
+console.log(`-------------- 8. Ternary Operator --------------`);
 let ageAge = 18;
 let drink;
 if (ageAge >= 5) {
@@ -135,7 +135,7 @@ let beverage = ageLimit >= 5 ? "Coffee" : "Milk";
 console.log(beverage);
 
 
-console.log(`// // // // // // 9. Switch Statement // // // // // //`);
+console.log(`-------------- 9. Switch Statement --------------`);
 let day = 2;
 switch (day) {
     case 0:
