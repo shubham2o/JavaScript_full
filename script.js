@@ -97,3 +97,68 @@ console.log(typeof null);
 
 // BigInt
 console.log(`>> BigInt`);
+let myNumber = BigInt(123);
+console.log(myNumber);
+// OR
+let myNumber1 = 123n;
+console.log(myNumber1);
+/*
+let myNumberOne = BigInt(123);
+let myNumberTwo = 123;
+console.log(myNumberOne + myNumberTwo); */ // Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+
+
+console.log(`// // // // // // 7. == v === // // // // // //`);
+let num1 = 7; // typeOf number
+let num2 = 7; // typeOf number
+console.log(num1 == num2);
+console.log(num1 === num2);
+
+let numberOne = 8; // typeOf number
+let numberTwo = "8"; // typeOf string
+console.log(numberOne == numberTwo);
+console.log(numberOne === numberTwo);
+
+
+console.log(`// // // // // // 8. Ternary Operator // // // // // //`);
+let ageAge = 18;
+let drink;
+if (ageAge >= 5) {
+    drink = "Coffee";
+} else {
+    drink = "Milk";
+}
+console.log(drink);
+
+let ageLimit = 8;
+let beverage = ageLimit >= 5 ? "Coffee" : "Milk";
+console.log(beverage);
+
+
+console.log(`// // // // // // 9. Switch Statement // // // // // //`);
+let day = 2;
+switch (day) {
+    case 0:
+        console.log("Sunday");
+        break;
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    default:
+        console.log("Invalid");
+}
