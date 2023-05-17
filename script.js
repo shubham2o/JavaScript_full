@@ -356,6 +356,49 @@ for (let index in fruits5) {
     console.log(index, fruits5[index]);
 }
 
+// Array Destructuring
+console.log(`>> Array Destructuring`);
+const myArray = ["value1", "value2"];
+let myVar1 = myArray[0];
+let myVar2 = myArray[1];
+console.log(myVar1);
+console.log(myVar2);
+
+let [myVar3, myVar4] = myArray;
+console.log(myVar3);
+console.log(myVar4);
+
+const [myVar5, myVar6] = myArray;
+console.log(myVar5);
+console.log(myVar6);
+
+let [myVar7, myVar8] = myArray;
+myVar7 = "Value Changed in let";
+console.log(myVar7);
+console.log(myVar8);
+
+/* const [myVar9, myVar10] = myArray;
+myVar9 = "Value Changed in const";
+console.log(myVar9);                // Uncaught TypeError: Assignment to constant variable.
+console.log(myVar10); */ //
+
+const myArr = ["value30"];
+let [myArr11, myArr12, myArr13] = myArr;
+console.log(myArr11);
+console.log(myArr12);
+console.log(myArr13);
+
+const myArray1 = ["value10", "value20", "value30"];
+let [myArr14, , myArr15] = myArray1;
+console.log(myArr14);
+console.log(myArr15);
+
+const myArray2 = ["value100", "value200", "value300", "value400"];
+let [myArr16, myArr17, ...newArray] = myArray2;
+console.log(myArr16);
+console.log(myArr17);
+console.log(newArray);
+
 
 console.log(`-------------- 17. Primitive v Reference Data Types --------------`);
 // Primitive Data Type
@@ -377,3 +420,83 @@ console.log(`Value of array1 is ${array1}`);
 array.push("item3");
 console.log(`Value of array is ${array}`);
 console.log(`Value of array1 is ${array1}`);
+
+
+console.log(`-------------- 18. Objects or Object Literals --------------`);
+// How to create an object
+console.log(`>> How to create an object`);
+const person = {
+    name: "John", // key(property) : "value"
+    age: 22
+};
+console.log(person);
+console.log(typeof person);
+console.log(person.name);
+console.log(person.age);
+
+const person1 = {
+    name: "James",
+    age: 22,
+    hobbies: ["guitar", "sleeping", "listening music"]
+}
+console.log(person1.hobbies);
+
+// How to add key value pairs to objects
+console.log(`>> How to add key value pairs to objects`);
+person1.gender = "male";
+console.log(person1);
+
+// How to access data from objects
+console.log(`>> How to access data from objects`);
+console.log(person1.name);
+console.log(person1["name"]);
+console.log(person1['name']);
+console.log(person1[name]);
+
+const person2 = {
+    "name": "Stephen",
+    "age": 35,
+    "Hobbies": ["guitar", "sleeping", "listening music"]
+}
+console.log(person2)
+console.log(person2.name);
+
+// Another way  to add key value pairs to objects
+console.log(`>> Another way to add key value pairs to objects`);
+person2["gender"] = "male";
+console.log(person2);
+console.log(person2['gender']);
+
+// How to iterate Objects using for in loop
+console.log(`>> How to iterate Objects using for in loop`);
+for (let key in person2) {
+    console.log(key, person2[key]);
+}
+
+for (let key in person2) {
+    console.log(`${key}: ${person2[key]}`);
+}
+
+// How to iterate Objects using Object.keys() ==> It returns an array containing the keys of object.
+console.log(`>> How to iterate Objects using Object.keys()`);
+console.log(Object.keys(person2));
+for (let val of Object.keys(person2)) {
+    console.log(val, person2[val]);
+}
+
+
+console.log(`-------------- 19. Dot v Bracket Notation --------------`);
+const person3 = {
+    name: "Jordan",
+    age: '23',
+    "person hobbies": ["guitar", "sleeping", "music"],
+}
+console.log(person3["person hobbies"]);
+console.log(person3["person hobbies"][2]);
+// console.log(person3.person hobbies);     // Uncaught SyntaxError
+
+const key = "email";
+person3[key] = "Jordan@gmail.com";
+console.log(person3.email);
+console.log(person3[key]);
+console.log(person3.key);
