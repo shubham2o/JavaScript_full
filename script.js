@@ -484,6 +484,226 @@ for (let val of Object.keys(person2)) {
     console.log(val, person2[val]);
 }
 
+// Computed Properties
+console.log(`>> Computed Properties`);
+const key1 = "objKey1";
+const key2 = "objKey2";
+const value1 = "myValue1";
+const value2 = "myValue2";
+
+const obj = {
+    [key1]: value1,
+    [key2]: value2,
+}
+console.log(obj);
+// OR
+const obj1 = {};
+obj[key1] = value1;
+obj[key2] = value2;
+console.log(obj);
+
+// Spread Operator
+console.log(`>> Spread Operator`);
+const array10 = [1, 2, 3];
+const array11 = [5, 6, 7];
+
+const newArray1 = [...array10];
+console.log(newArray1);
+
+const newArray2 = [...array10, ...array11];
+console.log(newArray2);
+
+const newArray3 = [...array10, array11];
+console.log(newArray3);
+
+const newArray4 = [..."abc"];
+console.log(newArray4);
+
+const newArray5 = [..."123"];
+console.log(newArray5);
+
+// Spread Operator in Objects
+console.log(`>> Spread Operator in Objects`);
+const obj2 = {
+    key1: "value1",
+    key2: "value2",
+}
+const obj3 = {
+    key3: "value3",
+    key4: "value4",
+}
+const myObj1 = {
+    ...obj2,
+    ...obj3
+};
+console.log(myObj1);
+
+const obj4 = {
+    key1: "value1",
+    key2: "value2",
+}
+const obj5 = {
+    key1: "value30",
+    key4: "value4",
+    key5: "value5",
+}
+const myObj2 = {
+    ...obj4,
+    ...obj5
+}
+console.log(myObj2);
+
+const obj6 = {
+    key1: "value1",
+    key2: "value2",
+}
+const obj7 = {
+    key1: "valueUnique",
+    key4: "value4",
+    key5: "value5",
+}
+const myObj3 = {
+    ...obj7,
+    ...obj6
+}
+console.log(myObj3);
+
+const obj8 = {
+    key1: "value1",
+    key2: "value2",
+    key3: "value999",
+}
+const obj9 = {
+    key1: "valueUnique",
+    key3: "value3",
+}
+const myObj4 = {
+    ...obj8,
+    ...obj9
+}
+console.log(myObj4);
+
+const obj10 = {
+    key1: "value1",
+    key2: "value2",
+    key3: "value999",
+}
+const obj11 = {
+    key1: "valueUnique",
+    key3: "value3",
+}
+const myObj5 = {
+    ...obj11,
+    ...obj10
+}
+console.log(myObj5);
+
+const obj12 = {
+    key1: "value1",
+    key2: "value2",
+}
+const obj13 = {
+    key1: "valueUnique",
+    key3: "value3",
+    key4: "value4",
+}
+const myObj6 = {
+    ...obj13,
+    ...obj12,
+    key69: "value69"
+}
+console.log(myObj6);
+
+const newObj7 = {
+    ...["item10", "item20", "item30"]
+};
+console.log(newObj7);
+
+// Object Destructuring
+console.log(`>> Object Destructuring`);
+const band = {
+    bandName: "Led Zeppelin",
+    famousSong: "Stairway to Heaven",
+};
+const {
+    bandName,
+    famousSong
+} = band;
+console.log(bandName);
+console.log(famousSong);
+
+const band1 = {
+    bandName1: "Led Zeppelin",
+    famousSong1: "Stairway to Heaven",
+    year1: 1968,
+    anotherFamousSong1: "Kashmir",
+}
+let {
+    bandName1: var1,
+    famousSong1
+} = band1;
+console.log(var1);
+
+const band2 = {
+    bandName2: "Led Zeppelin",
+    famousSong2: "Stairway to Heaven",
+    year2: 1968,
+    anotherFamousSong2: "Kashmir",
+}
+let {
+    bandName2,
+    famousSong2,
+    ...restProp
+} = band2;
+console.log(restProp);
+
+// Object inside Arrays
+console.log(`>> Object inside Arrays`);
+const users = [{
+    userId: 1,
+    userName: "harshit",
+    gender: "male"
+}, {
+    userId: 2,
+    userName: "mohit",
+    gender: "male"
+}, {
+    userId: 3,
+    userName: "nitish",
+    gender: "male"
+}];
+console.log(users);
+
+for (let user of users) {
+    console.log(user);
+}
+
+for (let user of users) {
+    console.log(user.userId);
+}
+
+// Nested Destructuring
+console.log(`>> Nested Destructuring`);
+const [user1, user2, user3] = users;
+console.log(user1);
+console.log(user2);
+console.log(user3);
+
+const [{
+    userName,
+    gender
+}] = users;
+console.log(userName);
+console.log(gender);
+
+const [, {
+    userName: userFirstName
+}, {
+    userId
+}] = users;
+console.log(userFirstName);
+console.log(userId);
+
 
 console.log(`-------------- 19. Dot v Bracket Notation --------------`);
 const person3 = {
@@ -500,3 +720,26 @@ person3[key] = "Jordan@gmail.com";
 console.log(person3.email);
 console.log(person3[key]);
 console.log(person3.key);
+
+
+console.log(`-------------- 20. Function Declaration --------------`);
+singHappyBirthday();
+
+function singHappyBirthday() {
+    console.log(`Happy Birthday to you...`);
+}
+singHappyBirthday();
+
+twoPlusFour();
+
+function twoPlusFour() {
+    console.log(2 + 4);
+}
+twoPlusFour();
+
+console.log(threePlusFive());
+
+function threePlusFive() {
+    return 3 + 5;
+}
+console.log(threePlusFive());
