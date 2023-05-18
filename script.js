@@ -914,3 +914,89 @@ myApp3();
 
 
 console.log(`-------------- 27. Block Scope v Function Scope --------------`);
+console.log(`Before - ${fName}`); {
+    var fName = "Shubham";
+}
+console.log(`After - ${fName}`);
+
+// console.log(`Before - ${fName1}`); // Uncaught ReferenceError: fName1 is not defined
+{
+    let fName1 = "Jonathan";
+}
+// console.log(fName1); // Uncaught ReferenceError: fName1 is not defined
+
+
+// console.log(`Before - ${fName2}`); // Uncaught ReferenceError: fName1 is not defined
+{
+    const fName2 = "Andrew";
+}
+// console.log(fName2); // Uncaught ReferenceError: fName1 is not defined
+
+let fName3 = "Ram";
+
+function myApp4() {
+    if (true) {
+        let fName3 = "Sita";
+        console.log(fName3);
+    }
+    console.log(fName3);
+}
+myApp4();
+
+const fName4 = "James";
+
+function myApp5() {
+    if (true) {
+        const fName4 = "Shubham";
+        console.log(fName4);
+    }
+    console.log(fName4);
+}
+myApp5();
+
+var fName5 = "Charles";
+
+function myApp6() {
+    if (true) {
+        var fName5 = "Kenny";
+        console.log(fName5);
+    }
+    console.log(fName5);
+}
+myApp6();
+
+var fName6 = "King";
+
+function myApp7() {
+    console.log(fName6);
+    if (true) {
+        var fName6 = "Michael";
+        console.log(fName6);
+    }
+    console.log(fName6);
+}
+myApp7();
+
+var fName7 = "Kobe";
+
+function myApp8() {
+    console.log(fName7);
+    if (true) {
+        let fName7 = "Goat";
+        console.log(fName7);
+    }
+    console.log(fName7);
+}
+myApp8();
+
+let fName8 = "Steven";
+
+function myApp9() {
+    console.log(fName8);
+    if (true) {
+        var fName8 = "Tyler";
+        console.log(fName8);
+    }
+    console.log(fName8);
+}
+myApp9();
