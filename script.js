@@ -730,16 +730,187 @@ function singHappyBirthday() {
 }
 singHappyBirthday();
 
-twoPlusFour();
-
 function twoPlusFour() {
     console.log(2 + 4);
 }
 twoPlusFour();
 
-console.log(threePlusFive());
-
 function threePlusFive() {
     return 3 + 5;
 }
 console.log(threePlusFive());
+
+function sumTwoNumbers(number1, number2) {
+    return number1 + number2;
+}
+console.log(sumTwoNumbers(4, 5));
+console.log(sumTwoNumbers());
+console.log(undefined + undefined);
+
+function isEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isEven(5));
+console.log(isEven(10));
+console.log(isEven(2));
+console.log(isEven(3));
+// OR
+function ifEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    }
+    return false;
+}
+console.log(ifEven(4));
+console.log(ifEven(5));
+console.log(ifEven(6));
+console.log(ifEven(7));
+// OR
+function isEvenNo(number) {
+    return number % 2 === 0;
+}
+console.log(isEvenNo(4));
+console.log(isEvenNo(5));
+
+function firstChar(anyString) {
+    return (anyString[0]);
+}
+console.log(firstChar("abc"));
+
+function findTarget(array, target) {
+    for (let i = 0; i <= array.length - 1; i++) {
+        if (array[i] === target) {
+            return i;
+        }
+    }
+    return "Not Found";
+}
+console.log(findTarget([22, 54, 4, 30, 99, 7], 30));
+console.log(findTarget([22, 54, 4, 30, 99, 7], 4));
+console.log(findTarget([22, 54, 4, 30, 99, 7], 300));
+
+
+console.log(`-------------- 21. Function Expression --------------`);
+// singHBD();        // Uncaught ReferenceError: Cannot access 'singHBD' before initialization
+const singHBD = function () {
+    console.log(`Happy Birthday to you...`);
+}
+singHBD();
+
+
+console.log(`-------------- 22. Arrow Functions --------------`);
+const happyBday = () => {
+    console.log(`Happy Birthday`);
+};
+happyBday();
+
+const isEven2 = number => number % 2 === 0;
+console.log(isEven2(2));
+
+
+console.log(`-------------- 24. Hoisting --------------`);
+// Variable Hoisting (var, let and const)
+console.log(`>> Variable Hoisting (var, let and const)`);
+console.log(p); // undefined
+var p = 5;
+console.log(p);
+
+// console.log(q); // Uncaught ReferenceError: Cannot access 'q' before initialization
+let q = 5;
+console.log(q);
+
+// console.log(r); // Uncaught ReferenceError: Cannot access 'r' before initialization
+const r = 5;
+console.log(r);
+
+// Function Hoisting
+console.log(`>> Function Hoisting`);
+sayHello();
+
+function sayHello() {
+    console.log(`Hello!`);
+}
+
+sayHello();
+
+// Hoisting with Function Expressions
+console.log(`>> Hoisting with Function Expressions`);
+// sayBye(); // Uncaught TypeError: sayBye is not a function
+var sayBye = function () {
+    console.log(`Bye!`);
+}
+sayBye();
+
+
+console.log(`-------------- 25. Functions inside function --------------`);
+
+function app() {
+    const myFunc = () => console.log(`hello from inside of myFunc`);
+    const addTwo = (num1, num2) => {
+        return num1 + num2;
+    }
+    const mul = (num1, num2) => {
+        return num1 * num2;
+    }
+    console.log("Inside app");
+    myFunc();
+    console.log(addTwo(2, 3));
+    console.log(mul(2, 3));
+}
+app();
+
+
+console.log(`-------------- 26. Lexical Scope --------------`);
+
+function myApp() {
+    const myVar = "value1";
+
+    function myFunc() {
+        console.log(`inside the myFunc, ${myVar}`);
+    }
+    console.log(myVar);
+    myFunc();
+}
+myApp();
+
+function myApp1() {
+    const myVar1 = "value22";
+
+    function myFunc() {
+        const myVar1 = "value59";
+        console.log(`inside the myFunc, ${myVar1}`);
+    }
+    console.log(myVar1);
+    myFunc();
+}
+myApp1();
+
+const var00 = "value00"; // Global Scope
+function myApp2() {
+    function myFunc() {
+        console.log(`inside the myFunc, ${var00}`);
+    }
+    console.log(var00);
+    myFunc();
+}
+myApp2();
+
+const var11 = "value11"; // Global Scope
+function myApp3() {
+    function myFunc() {
+        const myFunc2 = () => {
+            console.log(`inside the myFunc2, ${var11}`);
+        }
+        myFunc2();
+    }
+    console.log(var11);
+    myFunc();
+}
+myApp3();
+
+
+console.log(`-------------- 27. Block Scope v Function Scope --------------`);

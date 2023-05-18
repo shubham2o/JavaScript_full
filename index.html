@@ -266,6 +266,107 @@
             can be called multiple times throughout your program.</p>
         <p>20.4 Calling a function and invoking a function refer to the same thing - the act of executing a
             function in a program.</p>
+        <p>20.5 The purpose of the return statement is to exit the function as soon as the target value is found.
+            Without the 'return' statement, the function would continue iterating through the rest of the array even
+            after the target value is changed. </p>
+        <hr>
+    </div>
+    <!-- 21. Function Expression -->
+    <div>
+        <h2>21. Function Expression</h2>
+        <p>21.1 In javascript, a function expression involves assigning a function to a variable or a constant. Function
+            expressions can be named or anonymous.</p>
+        <p>21.2 Function expressions provide a way to create functions on the fly, assign them to variables, and use
+            them in various contexts within javascript. </p>
+        <hr>
+    </div>
+    <!-- 22. Arrow Functions -->
+    <div>
+        <h2>22. Arrow Functions</h2>
+        <p>22.1 Arrow functions also known as fat arrow functions, are a concise syntax introduced in ECMAScript 6 (ES6)
+            for creating functions in Javascript.</p>
+        <p>22.2 They provide a shorter syntax compared to traditional function expressions and lexically bind this
+            value, resulting in some differences in behavior. </p>
+        <p>22.3 Arrow functions are used in scenarios where a concise and lexical 'this' binding is desired, such as in
+            event handlers, array methods like map(), filter() and reduce() and when working with a asynchronous
+            functions.</p>
+        <p>22.4 It's important to note that arrow functions are not suitable for all use cases, particularly when
+            dynamic scoping or the this value is needed. In such cases, traditional function expressions are still the
+            appropriate choice.</p>
+        <p>22.5 You can remove the parentheses, curly braces and return keyword when using an arrow function in
+            javascript if you have only one parameter to pass. </p>
+        <hr>
+    </div>
+    <!-- 23. Function Declaration v Function Expression v Arrow Function -->
+    <div>
+        <h2>23. Function Declaration v Function Expression v Arrow Function</h2>
+        <p>23.1 The choice between function declarations, function expressions, and arrow functions depends on the
+            specific context and requirements of your code. Each type of function has its own strengths and use cases.
+        </p>
+        <p>23.2 Scope and hoisting requirements: If you need the function to be accessible throughout the entire scope
+            and be hoisted, function declarations are suitable choice. Otherwise, function expressions or arrow
+            functions can be used. </p>
+        <p>23.3 Readability and code style: Arrow functions provide a more concise syntax, which can enhance code
+            readability, especially for simple and short functions. However, for more complex functions, traditional
+            function declarations or expression may be easier to understand. </p>
+        <p>23.4 'this' binding: Arrow functions have a lexically bound this value, which can be advantageous in certain
+            cases. If you rely on dynamic scoping or need to manipulate the this value, regular functions or function
+            expressions may be more appropriate. </p>
+        <p>23.5 In summary, there is no single best type of function. Each has its own strengths and use cases, so
+            choose the one that best suits the specific requirements and coding style of your project. </p>
+        <hr>
+    </div>
+    <!-- 24. Hoisting -->
+    <div>
+        <h2>24. Hoisting</h2>
+        <p>24.1 Hoisting is a JavaScript mechanism that allows variables and function declaration to be moved to the top
+            of their respective scopes during the compilation phase. </p>
+        <p>24.2 Hoisting is a concept specific to variable and function declarations, not their initialization or
+            assignments. The actual assignment or initialization still happens at the original position in the code.</p>
+        <p>24.3 Variable Hoisting (var, let and const): When variable are hoisted, the variable declaration are moved to
+            the top of their scope while keeping their assignments in place. However, only the declarations are hoisted,
+            not the initializations. If you access a variable before its declaration, it will have the value
+            'undefined'.</p>
+        <p>24.4 Function Hoisting: Function declarations are fully hoisted, which means that both the function name and
+            its body are moved to the top of the scope. As a result, you can call a function before its actual
+            declaration in the code.</p>
+        <p>24.5 Hoisting with Function Expression: Function expressions, which are assigned to variables, are not
+            hoisted in the same way as function declarations. Only the variable declaration is hoisted, not the function
+            assignment. </p>
+        <p>24.6 It's important to understand hoisting to avoid unexpected behavior and write clear and maintainable
+            code. To ensure code clarity, it is generally recommended to declare variables at the top of their scope and
+            declare functions before they are used, regardless of hoisting behavior. </p>
+        <hr>
+    </div>
+    <!-- 25. Functions inside function -->
+    <div>
+        <h2>25. Functions inside function</h2>
+        <p>25.1 When a function is defined inside another function, it is referred to as a "nested function" or "inner
+            function". The outer function is commonly known as the "parent function" or "containing function".</p>
+        <p>25.2 It's important to note that inner functions are only accessible within the scope of the outer function.
+            They cannot be directly called from outside the outer function. However, if the outer function returns the
+            inner function or exposes it through an object, you can invoke the inner function from the outside. </p>
+        <hr>
+    </div>
+    <!-- 26. Lexical Scope -->
+    <div>
+        <h2>26. Lexical Scope</h2>
+        <p>26.1 It refers to the scope resolution of variables and functions based on the static structure of the code,
+            specifically the location where the variables and functions are defined in the source code. Lexical scope
+            determines how variable names are resolved during the execution of the code. </p>
+        <p>26.2 When a variable or function is defined inside another function, the inner function has access to the
+            variables and functions of its outer function. This access is possible because javascript uses lexical
+            scoping. Lexical scoping means that the scope of a variable or function is determined by its position in the
+            source code during the lexical analysis phase, regardless of where it is called during the runtime. </p>
+        <p>26.3 It is important for understanding how variables are resolved and accessed in javascript. It helps create
+            encapsulation and enables the use of of closures, where functions retain access to variables even after
+            their outer function has finished executing.</p>
+        <hr>
+    </div>
+    <!-- 27. Block Scope v Function Scope -->
+    <div>
+        <h2>27. Block Scope v Function Scope</h2>
+        <p>27.1 </p>
         <hr>
     </div>
 
