@@ -1000,3 +1000,82 @@ function myApp9() {
     console.log(fName8);
 }
 myApp9();
+
+
+console.log(`-------------- 28. Default parameters --------------`);
+
+function addTwo(a, b) {
+    return a + b;
+}
+console.log(addTwo(4));
+
+function add2(a, b) {
+    if (typeof b === 'undefined') {
+        b = 1;
+    }
+    return a + b;
+}
+console.log(add2(4));
+
+// OR
+function plusTwo(a, b = 1) {
+    return a + b;
+}
+console.log(plusTwo(4));
+
+
+console.log(`-------------- 29. Rest parameters --------------`);
+
+function restFunc(a, b, ...c) {
+    console.log(`a is ${a}`);
+    console.log(`b is ${b}`);
+    console.log(`c is ${c}`);
+    console.log(c);
+}
+restFunc(100, 200, 300, 400, 500, 600);
+/* The output of ...c (rest parameter) will be an array. It will not show in array 
+because we have used string template while console.log and we know that anything / 
+any data-type + string will always results in string. */
+
+function addAll(...numbers) {
+    let total = 0;
+    for (let val of numbers) {
+        total += val;
+    }
+    return total;
+}
+console.log(addAll(1, 2, 3, 4, 5));
+
+
+console.log(`-------------- 30. Parameter Destructuring --------------`);
+const person4 = {
+    firstName: "Chris",
+    gender: "male",
+}
+
+function printDetails(obj) {
+    console.log(obj.firstName);
+    console.log(obj.gender);
+}
+printDetails(person4);
+
+function printDetails1(obj) {
+    console.log(obj.firstName);
+    console.log(obj.gender);
+    console.log(obj.age);
+}
+printDetails1(person4);
+// OR
+function printDetails2({
+    firstName: name,
+    gender,
+    age
+}) {
+    console.log(name);
+    console.log(gender);
+    console.log(age);
+}
+printDetails2(person4);
+
+
+console.log(`-------------- 31. Callback / Higher Order Functions --------------`);

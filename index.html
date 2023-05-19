@@ -379,6 +379,65 @@
             unintended access. </p>
         <hr>
     </div>
+    <!-- 28. Default parameters -->
+    <div>
+        <h2>28. Default parameters</h2>
+        <p>28.1 Default parameters allow you to assign default values to function parameters if no argument or an
+            undefined value is passed when calling the function. Default parameters were introduced in ECMAScript 2015
+            (ES6) and are a convenient way to handle missing or undefined values. </p>
+        <p>28.2 It is worth noting that default parameters are evaluated at the time the function is called, no when
+            it's defined.</p>
+        <p>28.3 This allows you to use variables or expressions as default values. However, if a default parameter
+            depends on the value of another parameter, you need to be cautious about the order in which the parameters
+            are defined.</p>
+        <p>28.4 Additionally, default parameters work with any function, not just named function. They can be used with
+            arrow functions, methods, and even function expressions. </p>
+        <hr>
+    </div>
+    <!-- 29. Rest parameters -->
+    <div>
+        <h2>29. Rest parameters</h2>
+        <p>29.1 Rest parameters allow you to present an indefinite number of arguments as an array with a function. Rest
+            parameter were introduced in ECMAScript 2015 (ES6) and provide a concise way to work with variable-length
+            argument lists. </p>
+        <p>29.2 They are useful when you want to work with functions that can accept a variable number of arguments.
+            Instead of accessing the argument through the 'arguments' object, you can use the rest parameter to gather
+            them conveniently into an array. </p>
+        <p>29.3 They must be the last parameter in the function's parameter list, as it collects all remaining
+            arguments. If desired, you can have regular parameters before the rest parameter. </p>
+        <p>29.4 The spread syntax can be used to pass an array to a function as separate argument. This is the inverse
+            of rest parameter, where the spread syntax spread an array into individual arguments. </p>
+        <hr>
+    </div>
+    <!-- 30. Parameter Destructuring -->
+    <div>
+        <h2>30. Parameter Destructuring</h2>
+        <p>30.1 Parameter Destructuring allows you to extract individual values from an object or an array and assign
+            them to variables within the function parameter list. It provides a concise way to access specific
+            properties or elements of complex data structures. </p>
+        <p>30.2 It is a powerful technique that allows you to access specific values from objects or arrays more
+            conveniently within function parameters. It can help simplify code and make it more readable, especially
+            when working with complex data structures. </p>
+        <hr>
+    </div>
+    <!-- 31. Callback / Higher Order Functions -->
+    <div>
+        <h2>31. Callback / Higher Order Functions</h2>
+        <p>31.1 Higher-order functions can take other functions as arguments and/or return functions as their results.
+            Essentially, they treat functions as values, enabling powerful functional programming patterns and
+            abstraction. </p>
+        <p>31.2 A callback function is a function that is passed as an argument to another function and is invoked or
+            called within that function. Callback functions are a fundamental concept in Javascript, especially in
+            asynchronous programming and event handling. </p>
+        <p>31.3 They are often used in scenarios where an operation takes time to complete, such as making an
+            asynchronous request or waiting for an event to occur. The callback function allows you to specify what
+            action should be taken once the operation is finished or the event is triggered. </p>
+        <p>31.4 Asynchronous functions in javascript commonly use callbacks to handle the result or error of an
+            operation.</p>
+        <p>31.5 They allow for more flexible and dynamic programming patterns, such as executing different actions
+            depending on the outcome of a function or operation.</p>
+        <hr>
+    </div>
 
     <script src="script.js"></script>
 </body>
