@@ -1079,3 +1079,76 @@ printDetails2(person4);
 
 
 console.log(`-------------- 31. Callback / Higher Order Functions --------------`);
+
+function callback() {
+    console.log(`Inside the callback function`);
+}
+
+function myFunction(param) {
+    param();
+}
+myFunction(callback);
+
+function callback1() {
+    console.log(`Inside the callback1 function`);
+}
+
+function myFunction1(param) {
+    console.log(`I am myFunction1`);
+    param();
+}
+myFunction1(callback1);
+
+function callback2(fullName) {
+    console.log(`Inside the callback2 function`);
+    console.log(fullName);
+}
+
+function myFunction2(param) {
+    console.log(`I am myFunction2`);
+    param("Jimmy Freaking Butler");
+}
+myFunction2(callback2);
+
+
+console.log(`-------------- 32. Function returning Functions / HOF --------------`);
+
+function myFirstName() {
+    function myLastName() {
+        console.log(`myFirstName myLastName`);
+    }
+    return myLastName();
+}
+myFirstName();
+// OR
+function myFirstName1() {
+    function myLastName1() {
+        console.log(`myFirstName1 myLastName1`);
+    }
+    return myLastName1;
+}
+myFirstName1()();;
+
+
+console.log(`-------------- 33. Important Array Methods --------------`)
+// forEach Method
+console.log(`>> forEach Method`);
+const random = [4, 2, 5, 8];
+console.log(random);
+
+function randomFunction(number, index) {
+    console.log(`index ${index}, number ${number}`);
+}
+
+for (let i = 0; i <= random.length - 1; i++) {
+    randomFunction(random[i], i);
+}
+// OR
+random.forEach(randomFunction);
+// OR
+random.forEach((number, index) => {
+    console.log(`index ${index}, number ${number}`);
+})
+
+// Map() Method / Higher Order Function
+console.log(`>> Map() Method / Higher Order Function`);
