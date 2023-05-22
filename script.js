@@ -1214,3 +1214,119 @@ console.log(userCart); // 3.
 console.log(userCart.reduce((acc, curr) => {
     return acc + curr.price
 }, 0)); // 4.
+
+// Sort() Method
+console.log(`>> Sort() Method`);
+const userNames = ['John', 'Michael', 'Stephen', 'Grace', 'Ayesha'];
+console.log(userNames); // 1.
+console.log(userNames.sort()); //2.
+console.log(userNames); // 3.
+
+const numbers4 = [15, 99, -30, 1200, 4000, 0];
+console.log(numbers4); // 4.
+console.log(numbers4.sort()); // 5.
+console.log(numbers4.sort((a, b) => a - b)); // 6.
+console.log(numbers4); // 7.
+
+const numbers5 = [15, 99, -30, 1200, 4000, 0];
+console.log(numbers5); // 8.
+console.log(numbers5.sort()); // 9.
+console.log(numbers5.sort((a, b) => b - a)); // 10.
+console.log(numbers5); // 11.
+
+const products = [{
+    productId: 1,
+    productName: 'p1',
+    price: 300
+}, {
+    productId: 2,
+    productName: 'p2',
+    price: 3000
+}, {
+    productId: 3,
+    productName: 'p3',
+    price: 200
+}, {
+    productId: 4,
+    productName: 'p4',
+    price: 8000
+}];
+console.log(products); // 12.
+console.log(products.sort((a, b) => a.price - b.price)); // 13.
+console.log(products); // 14.
+
+const lowToHigh = products.slice(0).sort((a, b) => a.price - b.price);
+console.log(lowToHigh); // 15.
+
+// Find() Method / Higher Order Function
+console.log(`>> Find() Method / Higher Order Function`);
+const myArray3 = ["Hello", "Cat", "Dog", "Lion"];
+console.log(myArray3); // 1.
+
+function isLength3(string) {
+    return string.length === 3;
+}
+console.log(isLength3(myArray3)); // 2.
+console.log(myArray3.find(isLength3)); // 3.
+console.log(myArray3.find(string => string.length === 3)); // 4.
+
+const userInfo = [{
+    userId: 1,
+    userName: "Jimmy"
+}, {
+    userId: 2,
+    userName: "Jason"
+}, {
+    userId: 3,
+    userName: "Norman"
+}, {
+    userId: 4,
+    userName: "Michael"
+}, {
+    userId: 5,
+    userName: "Aaron"
+}];
+console.log(userInfo); // 5.
+console.log(userInfo.find(user => user.userId === 3)); // 6.
+
+// Every() Method / Higher Order Function
+console.log(`>> Every() Method / Higher Order Function`);
+const numbers6 = [2, 4, 6, 8, 10];
+console.log(numbers6); // 1.
+console.log(numbers6.every(num => num % 2 === 0)); // 2.
+const numbers7 = [2, 4, 343, 6, 8, 1];
+console.log(numbers7); // 3.
+console.log(numbers7.every(num => num % 2 === 0)); // 4.
+
+// Some() Method / Higher Order Function
+console.log(`>> Some() Method / Higher Order Function`);
+const numbers8 = [3, 5, 8, 9];
+console.log(numbers8); // 1.
+console.log(numbers.some(num => num % 2 === 0)); // 2.
+
+// Fill() Method
+console.log(`>> Fill() Method`);
+const newArr = new Array(10).fill(-30);
+console.log(newArr); // 1.
+
+const newArr1 = [1, 2, 3, 4, 5, 6, 7];
+console.log(newArr1.fill(1000000, 1, 4)); // 2.
+console.log(newArr1); // 3.
+
+// Splice() Method
+console.log(`>> Splice() Method`);
+const newArr2 = ['item1', 'item2', 'item3', 'item4', 'item5'];
+console.log(newArr2); // 1.
+console.log(newArr2.splice(1, 1)); // 2.
+console.log(newArr2); // 3.
+
+// (Start, Delete, Insert)
+let newArr3 = ['item10', 'item20', 'item30'];
+console.log(newArr3); // 4. 
+newArr3.splice(1, 0, 'inserted item');
+console.log(newArr3); // 5.
+
+let newArr4 = ['item101', 'item102', 'item103'];
+console.log(newArr4); // 6.
+console.log(newArr4.splice(1, 2, 'inserted item 1', 'inserted item 2')); // 7.
+console.log(newArr4); // 8.

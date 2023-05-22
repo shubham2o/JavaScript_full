@@ -498,6 +498,65 @@
         <p>33.4.3 The reduce method can be use for various operations, such as calculating the sum, finding the maximum
             or minimum value, concatenating strings, and more. The flexibility of the method allows you to perform
             complex computations on arrays. </p>
+        <!-- 33.5 Sort() Method -->
+        <strong>33.5 Sort() Method</strong>
+        <p>33.5.1 The sort() method in javascript is used to sort the elements of an array in place, meaning it modifies
+            the original array. By default, it sorts the elements in ascending order based on their string
+            representations. However, you can provide a custom sorting function to define your own sorting criteria.</p>
+        <p>33.5.2 The sort() method rearranges the elements of the array in place according to the sorting criteria. It
+            compares elements pairwise and determines their relative order based on the return value of the
+            compareFunction.</p>
+        <p>33.5.3 The compareFunction should return a negative value if the first element should be sorted before the
+            second element, a positive value if the first element should be sorted after the second element, or 0 if the
+            two elements are equal and their order doesn't matter. </p>
+        <p>33.5.4 If (a-b) answer / output results in a positive number (i.e greater than 0, 0 is greater than number),
+            then b will be assign before a in an array.</p>
+        <p>33.5.5 If (b-a) answer / output results in a negative number (i.e smaller than 0, 0 is smaller than number),
+            then b will not be assign before a and will remain in the same old position in an array. </p>
+        <!-- 33.6 Find() Method / Higher Order Function -->
+        <strong>33.6 Find() Method / Higher Order Function</strong>
+        <p>33.6.1 The find() method in javascript is a higher-order function that is used to find the first element in
+            an array that satisfies a given condition. It returns the value of the first element that passed the
+            provided testing function.</p>
+        <p>33.6.2 The find() method iterates over each element in the array and calls the provided function for each
+            element until a match is found. Once the callback function returns true for an element, find() immediately
+            returns the value of that element. If no element satisfies the condition, find() returns undefined. </p>
+        <p>33.6.3 The find() method is useful when you need to retrieve a single element from an array based on a
+            specific condition.</p>
+        <!-- 33.7 Every() Method / Higher Order Function -->
+        <strong>33.7 Every() Method / Higher Order Function</strong>
+        <p>33.7.1 The every() method in javascript is a higher-order function that checks whether all elements in an
+            array satisfy a given condition. It returns true if the condition is true for every element in the array. If
+            any element fails the condition, it returns false. </p>
+        <p>33.7.2 It iterates over each element in the array and calls the provided function for each element. It checks
+            if the callback function returns true for every element. If any iteration returns false, the every() method
+            immediately returns false. If all iterations return true, the every() method returns true. </p>
+        <p>33.7.3 It is useful when you need to check if an certain condition is satisfied for all elements in an array.
+            It can be used to validate data or perform checks on multiple elements at once. </p>
+        <!-- 33.8 Some() Method / Higher Order Function -->
+        <strong>33.8 Some() Method / Higher Order Function</strong>
+        <p>33.8.1 The some() method in javascript is a higher-order function that checks whether at least one element in
+            an array satisfies a given condition. It returns true if the condition is true for at least one element in
+            the array. If none of the elements satisfy the condition, it returns false. </p>
+        <p>33.8.2 It is useful when you need to check if a certain condition is satisfied for at least one element in an
+            array.</p>
+        <!-- 33.9 Fill() Method -->
+        <strong>33.9 Fill() Method</strong>
+        <p>33.9.1 The fill() method in javascript is used to change all the elements in an array with a static value. It
+            modifies the original array by replacing its element with the specified value. It does not involve any
+            callback function.</p>
+        <p>33.9.2 This method is useful when you want to replace all or a portion of the elements in an array with a
+            specified value, such as initializing an array with a default value or resetting a portion of the array to a
+            known value. </p>
+        <!-- 33.10 Splice() Method -->
+        <strong>33.10. Splice() Method</strong>
+        <p>33.10.1 The splice() method in javascript is used to change the contents of an array by removing, replacing,
+            or adding elements. It modifies the original array and returns an array containing the removed elements, if
+            any. </p>
+        <p>33.10.2 The splice method modifies the array by removing elements specified by deleteCount starting from the
+            start index. It can also add new elements at the start index by including them as additional arguments. </p>
+        <p>33.10.3 This method is versatile and allows you to perform various modifications on an array, including
+            removing elements, inserting elements, or replacing elements at specific positions within the array. </p>
         <hr>
     </div>
 
