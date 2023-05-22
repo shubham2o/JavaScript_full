@@ -1330,3 +1330,140 @@ let newArr4 = ['item101', 'item102', 'item103'];
 console.log(newArr4); // 6.
 console.log(newArr4.splice(1, 2, 'inserted item 1', 'inserted item 2')); // 7.
 console.log(newArr4); // 8.
+
+
+console.log(`-------------- 34. Iterables --------------`)
+const personName = "Joseph";
+console.log(personName); // 1.
+for (let char of personName) {
+    console.log(char); // 2.
+}
+
+/* const randomNo = 123456789;
+for (let num of randomNo) {
+    console.log(num);   // Uncaught TypeError: randomNo is not iterable
+} */
+
+const randomNo1 = [123456789];
+console.log(randomNo1); // 3.
+for (let num of randomNo1) {
+    console.log(num); // 4.
+}
+
+const userDetails = {
+    key1: 'value1',
+    key2: 'value2'
+}
+console.log(userDetails); // 5.
+/* for (let val of userDetails) {
+    console.log(val); // Uncaught TypeError: userDetails is not iterable
+
+} */
+
+
+console.log(`-------------- 36. Sets --------------`)
+/* const no1 = new Set(0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5);
+console.log(no1); */ // Uncaught TypeError: number 0 is not iterable
+
+const newArrays = new Set([0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5]);
+console.log(newArrays); // 1.
+
+const newStrings = new Set("aabbccdd");
+console.log(newStrings); // 2.
+
+const newStrings1 = new Set("aabbccdd");
+console.log(newStrings[0]); // 3.
+
+const newNames = new Set();
+newNames.add("aabbccdd");
+console.log(newNames); // 4.
+
+const newNames1 = new Set();
+newNames1.add("JavaScript");
+newNames1.add("JavaScript");
+newNames1.add("JavaScript");
+console.log(newNames1); // 5.
+
+const newItems = ["item1", "item2", "item3"];
+const newNo = new Set();
+newNo.add(newItems);
+newNo.add("Shubham");
+newNo.add(newItems);
+console.log(newNo); // 6.
+
+const newNo1 = new Set();
+newNo1.add(['item1', 'item2', 'item3']);
+newNo1.add("Henry");
+newNo1.add(['item1', 'item2', 'item3']);
+console.log(newNo1); // 7.
+
+const newItems1 = ['item1', 'item2', 'item3'];
+const newNo2 = new Set();
+newNo2.add(newItems1);
+newNo2.add(newItems1);
+newNo2.add(['item1', 'item2', 'item3', 'item3']);
+newNo2.add(['item1', 'item2', 'item3', 'item3']);
+newNo2.add("Christopher");
+console.log(newNo2); // 8.
+
+const newNo3 = new Set();
+const newItems2 = ["item1", "item2", "item3", "item3"];
+newNo3.add(newItems2);
+console.log(newNo3); // 9.
+
+if (newNo3.has(1)) {
+    console.log(`True, it has 1`);
+} else {
+    console.log(`False, it does not have 1`); // 10.
+}
+
+if (newNo3.has(newItems2)) {
+    console.log(`True.`); // 11.
+} else {
+    console.log(`False.`);
+}
+
+const newNo4 = new Set();
+const newItems3 = ['item1', 'item2', 'item3', 'item3'];
+newNo4.add(newItems3);
+newNo4.add(1);
+newNo4.add(2);
+newNo4.add(3);
+newNo4.add(4);
+newNo4.add(5);
+newNo4.add(6);
+for (let val of newNo4) {
+    console.log(val); // 12.
+}
+
+const myNewArr = [1, 2, 4, 4, 5, 6, 5, 6];
+
+const myNewArr1 = new Set();
+myNewArr1.add(myNewArr);
+myNewArr1.add(myNewArr);
+console.log(myNewArr); // 13.
+
+const myNewArr3 = new Set(myNewArr);
+console.log(myNewArr3); // 14.
+
+const myNewArr4 = new Set(myNewArr);
+let length = 0;
+for (let val of myNewArr4) {
+    length++;
+}
+console.log(length); // 15.
+
+const personDetails = {
+    firstName: 'Roger',
+    age: 7,
+    1: 'one',
+}
+
+for (let i in personDetails) {
+    console.log(`${i}, ${personDetails[i]}`); // 16.
+}
+console.log(personDetails['1']); // 17.
+console.log(typeof personDetails['1']); // 18.
+
+
+console.log(`-------------- 37. Maps --------------`)
