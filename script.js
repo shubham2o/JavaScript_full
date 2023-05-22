@@ -1134,21 +1134,83 @@ console.log(`-------------- 33. Important Array Methods --------------`)
 // forEach Method
 console.log(`>> forEach Method`);
 const random = [4, 2, 5, 8];
-console.log(random);
+console.log(random); // 1.
 
 function randomFunction(number, index) {
     console.log(`index ${index}, number ${number}`);
 }
 
 for (let i = 0; i <= random.length - 1; i++) {
-    randomFunction(random[i], i);
+    randomFunction(random[i], i); // 2.
 }
-// OR
-random.forEach(randomFunction);
-// OR
+
+random.forEach(randomFunction); // 3.
+
 random.forEach((number, index) => {
-    console.log(`index ${index}, number ${number}`);
+    console.log(`index ${index}, number ${number}`); // 4.
 })
 
 // Map() Method / Higher Order Function
 console.log(`>> Map() Method / Higher Order Function`);
+let numbers1 = [3, 4, 6, 1, 8];
+console.log(numbers1); // 1.
+
+const multiplyBy2 = function (number) {
+    console.log(number * 2);
+}
+numbers1.map(multiplyBy2); // 2.
+
+const multiplyTwo1 = numbers1.map(multiplyBy2);
+console.log(multiplyTwo1); // 3.
+
+const multiply = function (num) {
+    return num * 2;
+}
+const multiplyTwo2 = numbers1.map(multiply);
+console.log(multiplyTwo2); // 4.
+
+numbers1.map(num => console.log(num * 2)); // 5.
+
+let multiplyTwo3 = numbers1.map(num => num * 2);
+console.log(multiplyTwo3); // 6.
+
+console.log(numbers1.map(num => num * 2)); // 7.
+
+// Filter() Method / Higher Order Function
+console.log(`>> Filter() Method / Higher Order Function`);
+const numbers2 = [1, 3, 2, 6, 4, 8];
+console.log(numbers2); // 1.
+
+const numIsEven = function (number) {
+    return number % 2 === 0;
+
+}
+console.log(numIsEven(numbers2)); // 2.
+console.log(numbers2.filter(numIsEven)); // 3.
+console.log(numbers2.filter(val => val % 2 === 0)); // 4.
+
+// Reduce() Method / Higher Order Function
+console.log(`>> Reduce() Method / Higher Order Function`);
+const numbers3 = [1, 2, 3, 4, 5];
+console.log(numbers3); // 1.
+
+console.log(numbers3.reduce((acc, curr) => acc + curr)); // 2.
+
+const userCart = [{
+    productId: 1,
+    productName: "Mobile",
+    price: 12000,
+}, {
+    productId: 2,
+    productName: "Laptop",
+    price: 22000,
+}, {
+    productId: 3,
+    productName: "TV",
+    price: 15000,
+}];
+console.log(userCart); // 3.
+
+console.log(userCart.reduce((acc, curr) => {
+    return acc + curr.price
+}, 0)); // 4.
