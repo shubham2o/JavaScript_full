@@ -604,12 +604,18 @@
             checking if a key exists, and iterating over the key-value pairs. </p>
         <hr>
     </div>
-    <!-- 38. Difference between Sets and Maps -->
+    <!-- 38. What is the difference between Sets and Maps? Can we use for-in loop in Sets, Maps or any other
+            Iterables? -->
     <div>
-        <h2>38. Difference between Sets and Maps</h2>
+        <h2>38. What is the difference between Sets and Maps? Can we use for-in loop in Sets, Maps or any other
+            Iterables? </h2>
         <p>38.1 Sets are collections of unique values without a specific order, whereas maps are collections of
             key-value pairs that maintain the insertion order. Sets are suitable for managing unique values, while maps
             are more appropriate when you need to associate values with specific keys. </p>
+        <p>38.2 No, it is not suitable to use a for-in loop in iterables in javascript. They are sequences of values. To
+            iterate over an iterable, you should use the forEach() method or the for-of loop. </p>
+        <p>38.3 The for-in loop is not suitable for iterating over iterables because it does not preserve the order of
+            the values. The for-of loop, on the other hand, does preserve the order of the values. </p>
         <hr>
     </div>
 
