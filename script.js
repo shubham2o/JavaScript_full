@@ -1467,3 +1467,94 @@ console.log(typeof personDetails['1']); // 18.
 
 
 console.log(`-------------- 37. Maps --------------`)
+const personDetails1 = new Map();
+personDetails1.set('firstName', 'John');
+personDetails1.set('age', 7);
+console.log(personDetails1); // 1.
+
+const personDetails2 = new Map();
+personDetails2.set('firstName', 'Kenny');
+personDetails2.set('age', 14);
+personDetails2.set(0, 'zero');
+console.log(personDetails2); // 2.
+
+const personDetails3 = new Map();
+personDetails3.set('firstName', 'Ernie');
+personDetails3.set('age', 20);
+personDetails3.set(3, 'Three');
+console.log(personDetails3.get("firstName")); // 3.
+console.log(personDetails3.get("age")); // 4.
+console.log(personDetails3.get(3)); // 5.
+
+const personDetails4 = new Map();
+personDetails4.set('firstName', 'Shrek');
+personDetails4.set('age', 5);
+personDetails4.set(10, 'Ten');
+console.log(personDetails4.keys()); // 6.
+
+const personDetails5 = new Map();
+personDetails5.set('firstName', 'Charles');
+personDetails5.set('age', 16);
+personDetails5.set(9, 'Nine');
+for (let key of personDetails5.keys()) {
+    console.log(key, typeof key, personDetails5.get(key)); // 7.
+}
+
+const personDetails6 = new Map();
+personDetails6.set('firstName', 'UnderDog');
+personDetails6.set('age', 3);
+personDetails6.set(1, 'One');
+personDetails6.set(34.90, 'point');
+personDetails6.set([9, 0, 9], 'ninezeronine');
+for (let key of personDetails6.keys()) {
+    console.log(key, typeof key, personDetails6.get(key)); // 8.
+}
+console.log(personDetails6); // 9.
+
+const personDetails7 = new Map();
+personDetails7.set('firstName', 'Jamal');
+personDetails7.set('age', 10);
+personDetails7.set(0, 'zero');
+for (let value of personDetails7) {
+    console.log(value); // 10.
+}
+
+for (let [key, value] of personDetails7) {
+    console.log(`${key}: ${value}`); // 11.
+}
+
+const personDetails8 = new Map([
+    ['firstName', 'Nick'],
+    ['age', 7],
+    [0, 'zero']
+]);
+console.log(personDetails8); // 12.
+
+const personDetails9 = new Map();
+personDetails9.set('firstName', 'Michael');
+personDetails9.set('age', 7);
+personDetails9.set(0, 'zero');
+console.log(personDetails9); // 13.
+
+const personDetails10 = {
+    id: 1,
+    firstName: 'Aaron',
+}
+const extraInfo = new Map();
+extraInfo.set(personDetails10, {
+    age: 8,
+    gender: 'male',
+});
+console.log(personDetails10.id); // 14.
+console.log(personDetails10.firstName); // 15.
+console.log(personDetails10); // 16.
+console.log(extraInfo); // 17.
+console.log(extraInfo.get(personDetails10)); // 18.
+console.log(extraInfo.get(personDetails10).age); // 19.
+console.log(extraInfo.get(personDetails10).gender); // 20.
+console.log(extraInfo.get(personDetails10)['age']); // 21.
+console.log(extraInfo.get(personDetails10)['gender']); // 22.
+console.log(extraInfo.get('id')); // 23.
+console.log(extraInfo.get('firstName')); // 24.
+console.log(extraInfo.get(personDetails10).id); // 25.
+console.log(extraInfo.get(personDetails10).firstName); // 26.
