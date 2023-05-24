@@ -1612,3 +1612,92 @@ const zipCode2 = customer.address?.zipCode; // undefined
 
 console.log(cityName1, zipCode1);
 console.log(cityName2, zipCode2); */
+
+
+console.log(`-------------- 41. Methods --------------`)
+const personInfo = {
+    firstName: "Kevin",
+    age: 8,
+    about: function () {
+        return `person name is ${this.firstName} and age is ${this.age}`;
+    }
+}
+console.log(personInfo); // 1.
+console.log(personInfo.about()); // 2.
+
+const personInfo1 = {
+    firstName: 'Kyrie',
+    age: 6,
+    about: function () {
+        console.log(`person name is ${this.firstName} and age is ${this.age}`);
+    }
+}
+console.log(personInfo1); // 3.
+personInfo1.about(); // 4.
+
+function personAbout() {
+    console.log(`person name is ${this.firstName} and age is ${this.age}`);
+}
+personAbout(); // 5.
+
+const personInfo2 = {
+    firstName: 'Ben',
+    age: 25,
+    about: personAbout,
+}
+console.log(personInfo2); // 6.
+personInfo2.about(); // 7.
+
+const personInfo3 = {
+    firstName: 'Luka',
+    age: 23,
+    about: personAbout,
+}
+console.log(personInfo3); // 8.
+personInfo3.about(); // 9.
+
+
+console.log(`-------------- 42. Window Object --------------`)
+console.log(window); // 1.
+console.log(this === window); // 2.
+function myWindow() {
+    console.log(this);
+}
+myWindow(); // 3.
+
+
+console.log(`-------------- 44. Call() Method --------------`)
+const userInfo4 = {
+    firstName: 'Jordan',
+    age: 23,
+    about: function () {
+        console.log(this.firstName, this.age);
+    }
+}
+
+const userInfo5 = {
+    firstName: 'Andre',
+    age: 40
+}
+
+userInfo4.about(); // 1.
+userInfo4.about.call(userInfo5); // 2.
+userInfo4.about.call(userInfo4); // 3.
+userInfo4.about.call(); // 4.
+
+const userInfo6 = {
+    firstName: 'Jerry',
+    age: 70,
+    about: function (hobby, favMusician) {
+        console.log(this.firstName, this.age, hobby, favMusician);
+    }
+}
+
+const userInfo7 = {
+    firstName: 'West',
+    age: '66',
+    hobby: 'NBA'
+}
+
+userInfo6.about.call(userInfo7); // 5.
+userInfo6.about.call(userInfo7, "Basketball", "Pink Floyd"); // 6.
