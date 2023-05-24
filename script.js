@@ -1558,3 +1558,57 @@ console.log(extraInfo.get('id')); // 23.
 console.log(extraInfo.get('firstName')); // 24.
 console.log(extraInfo.get(personDetails10).id); // 25.
 console.log(extraInfo.get(personDetails10).firstName); // 26.
+
+
+console.log(`-------------- 39. Clone using Object.assign() --------------`)
+const newObj = {
+    key1: 'value1',
+    key2: 'value2',
+}
+console.log(newObj); // 1.
+
+const newObj1 = newObj;
+console.log(newObj1); // 2.
+
+const newObj2 = {
+    ...newObj
+};
+console.log(newObj2); // 3.
+
+const newObj3 = Object.assign(newObj);
+console.log(newObj3); // 4.
+
+const newObj4 = JSON.parse(JSON.stringify(newObj));
+console.log(newObj4); // 5.
+
+newObj.key3 = 'value3000';
+
+console.log(newObj); // 6.
+console.log(newObj1); // 7.
+console.log(newObj2); // 8.
+console.log(newObj3); // 9.
+console.log(newObj4); // 10.
+
+const newObj5 = Object.assign({}, newObj);
+console.log(newObj5); // 11.
+
+
+console.log(`-------------- 40. Optional Chaining "?" --------------`)
+/* const customer = {
+    name: 'John',
+    address: {
+        city: 'New York',
+        street: '123 Main St'
+    }
+};
+
+// Accessing nested properties without optional chaining
+const cityName1 = customer.address.city; // 'New York'
+const zipCode1 = customer.address.zipCode; // undefined
+
+// Accessing nested properties with optional chaining
+const cityName2 = customer.address?.city; // 'New York'
+const zipCode2 = customer.address?.zipCode; // undefined
+
+console.log(cityName1, zipCode1);
+console.log(cityName2, zipCode2); */

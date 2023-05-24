@@ -618,6 +618,32 @@
             the values. The for-of loop, on the other hand, does preserve the order of the values. </p>
         <hr>
     </div>
+    <!-- 39. Clone using Object.assign() -->
+    <div>
+        <h2>39. Clone using Object.assign()</h2>
+        <p>39.1 Object.assign() method is used to create a shallow copy or clone of an object. This method copies the
+            values of all enumerable properties from one or more source objects to a target object. </p>
+        <p>39.2 This method performs a shallow copy, which means that if the original object contains nested objects or
+            arrays, those nested objects will still be shared between the original object and the cloned object. </p>
+        <p>39.3 If you need a deep clone, where nested object are also cloned, you would need to use alternative methods
+            like JSON.parse(JSON.stringify(originalObj)) or libraries specifically designed for deep cloning objects.
+        </p>
+        <p>39.4 This only creates a new object with copied properties; it does not create a prototype chain or copy
+            non-enumerable properties or methods. </p>
+        <hr>
+    </div>
+    <!-- 40. Optional Chaining "?" -->
+    <div>
+        <h2>40. Optional Chaining "?" </h2>
+        <p>40.1 It is a feature that allows you to access properties or call methods on an object without having to
+            explicitly for the existence of the intermediate properties. </p>
+        <p>40.2 The optional chaining operator "?" is used to access properties or call methods on an object without
+            causing an error if any intermediate property is null or undefined. </p>
+        <p>40.3 It is supported in modern JavaScript environments, including Node.js and most modern browsers. However,
+            if you need to support older environments, you may need to transpile your code using tools like Babel to
+            ensure compatibilty. </p>
+        <hr>
+    </div>
 
     <script src="script.js"></script>
 </body>
