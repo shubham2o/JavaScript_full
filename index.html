@@ -792,6 +792,42 @@
             object for objects created by the function. </p>
         <hr>
     </div>
+    <!-- 52. new keyword -->
+    <div>
+        <h2>52. new keyword</h2>
+        <p>52.1 In javascript, the 'new' keyword is used to create an instance (object) of a constructor function. It is
+            typically used with constructor function to create new objects with the same structure and behavior. </p>
+        <p>52.2 When you use the new keyword with a constructor function, it creates an empty object. </p>
+        <p>52.3 It sets the [[Prototype]] of the newly created object to the 'prototype' property of the constructor
+            function. </p>
+        <p>52.4 It binds the newly created object as the value of 'this' within the constructor function.</p>
+        <p>52.5 The constructor function initializes the newly created object by assigning properties and methods to it
+            using the 'this' keyword. </p>
+        <p>52.6 While using the new keyword, it is important to define the constructor function properly, using the
+            capitalization convention (e.g. 'Person' instead of 'person'), to indicate that it should be used with the
+            'new' keyword as a constructor. </p>
+        <hr>
+    </div>
+    <!-- 53. hasOwnProperty() -->
+    <div>
+        <h2>53. hasOwnProperty()</h2>
+        <p>53.1 The hasOwnProperty() method is a built-in method in javascript that is used to check if an object has
+            specific property.</p>
+        <p>53.2 It returns a boolean value indicating whether the object has the specified property as a
+            direct property of itself (not inherited from its prototype chain.) </p>
+        <hr>
+    </div>
+    <!-- 54. Only functions in javascript can have prototypes? -->
+    <div>
+        <h2>54. Only functions in javascript can have prototypes?</h2>
+        <p>54.1 In javascript, all objects have a prototype, not just functions.</p>
+        <p>54.2 However, the "prototype" property is specially associated with the functions and is used to implement
+            inheritance. When a function is defined in JavaScript, it automatically gets a `prototype` property. </p>
+        <p>54.3 This prototype property is an object that is shared among all instances (objects) created using that
+            function as a constructor.</p>
+        <hr>
+    </div>
+
 
     <script src="script.js"></script>
 </body>

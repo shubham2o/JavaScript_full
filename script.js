@@ -1892,3 +1892,104 @@ console.log(admin4); // 13.
 console.log(admin4.about()); // 14.
 console.log(admin4.is18()); // 15.
 console.log(admin4.sing()); // 16.
+
+
+console.log(`-------------- 52. new keyword --------------`)
+
+function Human(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+const humanBeing1 = new Human("Alice", 25);
+const humanBeing2 = new Human("Bob", 25);
+console.log(humanBeing1); // 1.
+console.log(humanBeing2); // 2.
+
+Human1.prototype.about = function () {
+    console.log(this.firstName, this.age);
+}
+
+function Human1(firstName, age) {
+    this.firstName = firstName;
+    this.age = age;
+}
+const humanBeing3 = new Human1("George", 50);
+console.log(humanBeing3); // 3.
+humanBeing3.about(); // 4.
+
+Human2.prototype.about = function () {
+    return `${this.firstName.toUpperCase()} is ${this.age} years old.`
+}
+Human2.prototype.is18 = function () {
+    return this.age >= 18;
+}
+Human2.prototype.sing = function () {
+    return `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}, play a song for me.`;
+}
+
+function Human2(firstName, lastName, email, age, address) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.age = age;
+    this.address = address;
+}
+const humanBeing4 = new Human2('Tom', 'Harper', 'th@gmail.com', 34, 12312);
+console.log(humanBeing4); // 5.
+console.log(humanBeing4.about()); // 6.
+console.log(humanBeing4.is18()); // 7.
+console.log(humanBeing4.sing()); // 8.
+
+
+console.log(`-------------- 53. hasOwnProperty() --------------`)
+Human3.prototype.about = function () {
+    return `${this.firstName} is ${this.age} years old.`;
+}
+Human3.prototype.is18 = function () {
+    return this.age >= 18;
+}
+
+function Human3(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+}
+const humanBeing5 = new Human3("Maya", "Dua", 23);
+
+for (let key in humanBeing5) {
+    console.log(key); // 1.
+}
+
+for (let key in humanBeing5) {
+    if (humanBeing5.hasOwnProperty(key)) {
+        console.log(key); // 2.
+    }
+}
+
+let newNumber = [1, 2, 3];
+console.log(Object.getPrototypeOf(newNumber)); // 3.
+console.log(Array.isArray(Object.getPrototypeOf(newNumber))); // 4.
+
+let newNumber1 = new Array(1, 2, 3);
+console.log(Object.getPrototypeOf(newNumber1)); // 5.
+console.log(Array.isArray(Object.getPrototypeOf(newNumber1))); // 6.
+
+function newNumber2() {
+    return `Hello function newNumber2`;
+}
+console.log(newNumber2()); // 7.
+console.log(newNumber2.prototype); // 8.
+console.log(Array.isArray(newNumber2.prototype)); // 9.
+
+function greetings() {
+    console.log("Hello from greetings");
+}
+greetings(); // 10.
+console.log(greetings.prototype); // 11.
+
+greetings.prototype = [];
+console.log(greetings.prototype); // 12.
+
+greetings.prototype.push("Jimmy Butler");
+console.log(greetings.prototype); // 13.
