@@ -1701,3 +1701,194 @@ const userInfo7 = {
 
 userInfo6.about.call(userInfo7); // 5.
 userInfo6.about.call(userInfo7, "Basketball", "Pink Floyd"); // 6.
+
+
+console.log(`-------------- 45. apply() Method --------------`)
+
+function userAbout(hobby, favMusician) {
+    console.log(this.firstName, this.age, hobby, favMusician);
+}
+
+const userInfo8 = {
+    firstName: 'James',
+    age: 80
+}
+
+const userInfo9 = {
+    firstName: 'Stewart',
+    age: 63,
+}
+
+userAbout.apply(userInfo8, ["Movies", "Sleep Token"]); // 1.
+userAbout.apply(userInfo9, ["Streaming", "Beatles"]); // 2.
+
+
+console.log(`-------------- 46. bind() Method --------------`)
+
+function about(hobby, music) {
+    console.log(this.firstName, this.age, hobby, music);
+}
+
+const userInfo10 = {
+    firstName: 'Robert',
+    age: 34
+}
+const bindUser1 = about.bind(userInfo10, "Acting", "Rock");
+bindUser1(); // 1.
+
+const userInfo11 = {
+    firstName: 'Joe',
+    age: 32
+}
+const bindUser2 = about.bind(userInfo11, ["Mafia", "Jazz"]);
+bindUser2(); // 2.
+
+const userInfo12 = {
+    firstName: 'Al',
+    age: 38
+}
+about.bind(userInfo12, "Mob", "Mexican")(); // 3.
+
+const userInfo13 = {
+    firstName: 'Ray',
+    age: 28,
+    about: function () {
+        console.log(this.firstName, this.age);
+    }
+}
+// const bindUser3 = userInfo13.about();
+// bindUser3();
+
+const bindUser4 = userInfo13.about.bind(userInfo13);
+bindUser4(); // 4.
+
+const userInfo14 = {
+    firstName: 'Tom',
+    age: 20,
+    about() {
+        console.log(this.firstName, this.age);
+    }
+}
+userInfo14.about(); // 5.
+
+
+console.log(`-------------- 47. Object.create() --------------`)
+const objCr1 = {
+    key1: 'value01',
+    key2: 'value02',
+}
+console.log(objCr1); // 1.
+
+const objCr2 = Object.create(objCr1);
+console.log(objCr2); // 2.
+console.log(objCr2.key1); // 3.
+console.log(objCr2.key2); // 4.
+
+objCr1.key3 = 'value03';
+console.log(objCr1); // 5.
+console.log(objCr2.key1); // 6.
+console.log(objCr2.key2); // 7.
+console.log(objCr2.key3); // 8.
+
+const objCr3 = objCr2;
+console.log(objCr3); // 9.
+console.log(objCr3.key1); // 10.
+console.log(objCr3.key2); // 11.
+console.log(objCr3.key3); // 12.
+
+const objCr4 = {};
+const objCr5 = Object.create(null);
+console.log(Object.getPrototypeOf(objCr4)); // 13.
+console.log(Object.getPrototypeOf(objCr5)); // 14.
+
+const objCr6 = {
+    key1: 'value1',
+    key2: 'value2',
+}
+objCr6.key3 = 'value3';
+const objCr7 = objCr6;
+const objCr8 = Object.create(objCr6);
+
+console.log(objCr6); // 15.
+console.log(objCr7); // 16.
+console.log(objCr8); // 17.
+
+console.log(objCr6.__proto__); // 18.
+console.log(objCr7.__proto__); // 19.
+console.log(objCr8.__proto__); // 20.
+
+console.log(Object.getPrototypeOf(objCr6)); // 21.
+console.log(Object.getPrototypeOf(objCr7)); // 22.
+console.log(Object.getPrototypeOf(objCr8)); // 23.
+
+
+console.log(`-------------- 49. prototype property --------------`)
+const userMethods = {
+    about() {
+        return `${this.firstName.toUpperCase()} is ${this.age} years old.`
+    },
+    is18() {
+        return this.age >= 18;
+    },
+    sing() {
+        return `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}, play a song for me.`;
+    },
+}
+
+function createUser(firstName, lastName, email, age, address) {
+    const admin = Object.create(userMethods);
+
+    admin.firstName = firstName;
+    admin.lastName = lastName;
+    admin.email = email;
+    admin.age = age;
+    admin.address = address;
+
+    return admin;
+}
+
+const admin1 = createUser("David", "Fisher", "davidfisher@gmail.com", 56, 23423);
+console.log(admin1); // 1.
+console.log(admin1.about()); // 2.
+console.log(admin1.is18()); // 3.
+console.log(admin1.sing()); // 4.
+
+const admin2 = createUser("Grace", "Kelly", "gk@gamil.com", 13, 89890);
+console.log(admin2); // 5.
+console.log(admin2.about()); // 6.
+console.log(admin2.is18()); // 7.
+console.log(admin2.sing()); // 8.
+
+createUser1.prototype.about = function () {
+    return `${this.firstName.toUpperCase()} is ${this.age} years old.`;
+}
+createUser1.prototype.is18 = function () {
+    return this.age >= 18;
+};
+createUser1.prototype.sing = function () {
+    return `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}, play a song for me.`;
+}
+
+function createUser1(firstName, lastName, email, age, address) {
+    const adminHead = Object.create(createUser1.prototype);
+
+    adminHead.firstName = firstName;
+    adminHead.lastName = lastName;
+    adminHead.email = email;
+    adminHead.age = age;
+    adminHead.address = address;
+
+    return adminHead;
+}
+
+const admin3 = createUser1("Roger", "Page", "rogerpage@gmail.com", 72, 101010);
+console.log(admin3); // 9.
+console.log(admin3.about()); // 10.
+console.log(admin3.is18()); // 11.
+console.log(admin3.sing()); // 12.
+
+const admin4 = createUser1("Kim", "Noah", "kn@gamil.com", 23, 765567);
+console.log(admin4); // 13.
+console.log(admin4.about()); // 14.
+console.log(admin4.is18()); // 15.
+console.log(admin4.sing()); // 16.

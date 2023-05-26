@@ -691,6 +691,107 @@
             are not defined on the current object. </p>
         <hr>
     </div>
+    <!-- 45. apply() Method -->
+    <div>
+        <h2>45. apply() Method</h2>
+        <p>45.1 It is a built-in function in JavaScript that allows you to invoke a function with a specified 'this'
+            value and argument provided as an array or array like object. </p>
+        <p>45.2 It is similar to call() method, but with the difference that the arguments are passed as an array rather
+            individually. </p>
+        <p>45.3 Note that starting from ES6, you can also use the spread syntax (`...`) to pass an array of arguments to
+            a function directly, which provides similar functionality to 'apply()' in a more concise way. </p>
+        <hr>
+    </div>
+    <!-- 46. bind() Method -->
+    <div>
+        <h2>46. bind() Method</h2>
+        <p>46.1 It does not invoke the function immediately but returns a new function that when called has its 'this'
+            value set to the provided value. </p>
+        <p>46.2 This is useful when you want to create a new function that will be called later with a specified
+            context.</p>
+        <hr>
+    </div>
+    <!-- 47. Object.create() -->
+    <div>
+        <h2>47. Object.create()</h2>
+        <p>47.1 The Object.create() method is a built-in function in javascript that creates a new object with the
+            specified prototype object and properties.</p>
+        <p>47.2 It allows you to create objects based on a prototype, providing prototypal inheritance in javascript.
+        </p>
+        <p>47.3 The object.create() method creates a new object that inherits from the specified prototype object. It
+            does not invoke a constructor function like `new` does. It is a way to create objects based on any existing
+            object, allowing for prototypal inheritance. </p>
+        <p>47.4 This is useful when you want to create multiple objects with similar characteristics and behavior,
+            sharing common functionality through the prototype object. </p>
+        <p>47.5 So, while you can use simple assignment operator ("=") to create objects, it won't provide the same
+            level of control over the prototype as "Object.create()" does. </p>
+        <hr>
+    </div>
+    <!-- 48. __proto__ = [[prototype]] = Object.getPrototypeOf() -->
+    <div>
+        <h2>48. __proto__ = [[prototype]] = Object.getPrototypeOf()</h2>
+        <!-- 48.1 __proto__ (deprecated) -->
+        <strong>48.1 __proto__ (deprecated)</strong>
+        <p>48.1.1 It is a deprecated property that allows direct access to the prototype of an object. It provides a way
+            to get or set the prototype of an object, but it is not recommended to use it in modern javascript code.
+        </p>
+        <!-- 48.2 [[prototype]] (internal property) -->
+        <strong>48.2 [[prototype]] (internal property) </strong>
+        <p>48.2.1 It is an internal property of Javascript object that represents the object's prototype. It is not
+            directly accessible or modifiable in normal javascript code. </p>
+        <!-- 48.3 Object.getPrototypeOf() -->
+        <strong>48.3 Object.getPrototypeOf() </strong>
+        <p>48.3.1 It is a built-in method in javascript that returns the prototype of an object. It allows to get the
+            prototype of an object using the deprecated '__proto__' property. </p>
+        <hr>
+    </div>
+    <!-- 49. prototype property -->
+    <div>
+        <h2>49. prototype property</h2>
+        <p>49.1 In javascript, every object has a property called 'prototype', which allows objects to inherit
+            properties and methods from other objects. The prototype property is a reference to an object, often
+            referred to as the object's prototype. </p>
+        <p>49.2 The prototype object serves as a blueprint or template for creating new objects. </p>
+        <p>49.3 When you access a property or method on an object, javascript first checks if that property or method
+            exists on the object itself. If it doesn't, it looks up the prototype chain to find the property or method
+            on the prototype object. </p>
+        <p>49.4 The 'prototype' property and the concept of prototypal inheritance are fundamental to javascript's
+            object oriented nature and allow for powerful and flexible code reuse and extension. </p>
+        <hr>
+    </div>
+    <!-- 50. Build-in function -->
+    <div>
+        <h2>50. Build-in function</h2>
+        <p>50.1 In javascript, there are several built-in functions that are available as part of the javascript
+            language itself. These functions are provided by the javascript runtime environment and can be used without
+            the need for any additional setup or import. </p>
+        <p>50.2 Here are some examples of built in functions in javascript: console.log(), alert(), setTimeout(),
+            setInterval(), parseInt(), Math.random(), Math.max(), Math.min(), typeof(), etc. These are just few examples
+            of built-in functions, there are more built-in functions available in the javascript.</p>
+        <hr>
+    </div>
+    <!-- 51. Difference between [[prototype]] and prototype -->
+    <div>
+        <h2>51. Difference between [[prototype]] and prototype.</h2>
+        <!-- 51.1 [[prototype]] -->
+        <strong>51.1 [[prototype]]</strong>
+        <p>51.1.1 It is also known as the internal [[prototype]] property or dunder proto. It is an internal property of
+            an object that specifies its prototype. It is a reference to another object from which the object inherits
+            properties and methods. It forms the prototype chain, allowing objects to delegate property access and
+            method invocation to their prototype objects. You can access the [[Prototype]] of an object using the
+            `Object.getPrototype()` method or the `__proto__`. </p>
+        <!-- 51.2 prototype -->
+        <strong>51.2 prototype</strong>
+        <p>51.2.1 It is a property specific to functions in javascript. When you define a function, it automatically
+            gets a `prototype` property assigned to it. It is an object that is used as the prototype for objects
+            created by that function as a constructor. It is used for setting up inheritance in javascript. It is not
+            directly accessible from instances of the function but is accessed through the [[Prototype]] of the
+            instances. </p>
+        <p>51.3 To summarize, [[prototype]] is an internal property that determines the prototype of an object, while
+            prototype is a property specific to functions used for setting up inheritance by defining the prototype
+            object for objects created by the function. </p>
+        <hr>
+    </div>
 
     <script src="script.js"></script>
 </body>
