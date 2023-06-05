@@ -1,835 +1,1520 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript_full</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- 1. Introduction -->
     <div>
-        <h2>1. Introduction</h2>
-        <p>1.1 NetScape Navigator in 1995 realized that the website should be interactive enough.</p>
-        <p>1.2 So, Brendan Eich in 10 days build JavaScript. But it was firstly named Mocha and not JavaScript. It was
-            later changed to name LiveScript. But LiveScript name was also later changed to JavaScript because of
-            popularity of the other programming language Java.</p>
-        <p>1.3 During this time, Internet Explorer realized and got to know the popularity of NetScape Navigator and its
-            language JavaScript. So, they also build a language by doing some modification to the javascript language
-            and gave it a name, called JScript.</p>
-        <p>1.4 During that time Netscape Navigator build JavaScript and Internet Explorer which was owned by Microsoft
-            back then, build JScript.</p>
-        <p>1.5 But, the problem was when we used javascript to build a website, then it was only looking attractive or
-            working properly on its originated platform which was NetScape Navigator. Similarly, the same situation
-            was with the Internet Explorer browser and its originated language JScript. People also had started to write
-            that this website is best viewed with the NetScape Navigator browser or open this website using the Internet
-            Explorer.</p>
-        <p>1.6 One of the drawback was that people don't have big budgets to be able to develop a single website on both
-            the platform as both the platform were not environment friendly. </p>
-        <p>1.7 Now, ECMA (European Computer Manufacturing Association) came into the scene.</p>
-        <p>1.8 ECMA decides what a technology or language should behave or work like. It also does the standardization
-            part of the language or the technology. So, during that time ECMA decides that how a scripting language
-            working on any web browser should perform or behave like. This means that if anyone wants to implement
-            javascript into their programming language then they should follow mentioned rules and regulations (inside
-            the documentation) into their programming language. Same rules should be followed and should behave in the
-            same way as well.</p>
-        <p>1.9 They named it as ECMAScript because javascript name trademark was with Oracle.</p>
-        <p>1.10 ES1 means ECMAScript 1. <br>
-            ES1 : 1997, <br>
-            ES2, <br>
-            ES3, <br>
-            ES4, <br>
-            ES5 : 2009, <br>
-            In 2009, ES:5 had lots of new features and more people had started engaging with it. </p>
-        <p>1.11 Now directly in 2015, comes ES:6 and it was the biggest update in the history of javascript.</p>
-        <p>1.12 ECMA has a group known as TC39 (Technical Committee 39), which decides what features should be there in
-            the new JavaScript, etc. This TC39 decided that they will release new version of JavaScript annually, every
-            year.</p>
-        <hr>
+      <h2>1. Introduction</h2>
+      <p>
+        1.1 NetScape Navigator in 1995 realized that the website should be
+        interactive enough.
+      </p>
+      <p>
+        1.2 So, Brendan Eich in 10 days build JavaScript. But it was firstly
+        named Mocha and not JavaScript. It was later changed to name LiveScript.
+        But LiveScript name was also later changed to JavaScript because of
+        popularity of the other programming language Java.
+      </p>
+      <p>
+        1.3 During this time, Internet Explorer realized and got to know the
+        popularity of NetScape Navigator and its language JavaScript. So, they
+        also build a language by doing some modification to the javascript
+        language and gave it a name, called JScript.
+      </p>
+      <p>
+        1.4 During that time Netscape Navigator build JavaScript and Internet
+        Explorer which was owned by Microsoft back then, build JScript.
+      </p>
+      <p>
+        1.5 But, the problem was when we used javascript to build a website,
+        then it was only looking attractive or working properly on its
+        originated platform which was NetScape Navigator. Similarly, the same
+        situation was with the Internet Explorer browser and its originated
+        language JScript. People also had started to write that this website is
+        best viewed with the NetScape Navigator browser or open this website
+        using the Internet Explorer.
+      </p>
+      <p>
+        1.6 One of the drawback was that people don't have big budgets to be
+        able to develop a single website on both the platform as both the
+        platform were not environment friendly.
+      </p>
+      <p>
+        1.7 Now, ECMA (European Computer Manufacturing Association) came into
+        the scene.
+      </p>
+      <p>
+        1.8 ECMA decides what a technology or language should behave or work
+        like. It also does the standardization part of the language or the
+        technology. So, during that time ECMA decides that how a scripting
+        language working on any web browser should perform or behave like. This
+        means that if anyone wants to implement javascript into their
+        programming language then they should follow mentioned rules and
+        regulations (inside the documentation) into their programming language.
+        Same rules should be followed and should behave in the same way as well.
+      </p>
+      <p>
+        1.9 They named it as ECMAScript because javascript name trademark was
+        with Oracle.
+      </p>
+      <p>
+        1.10 ES1 means ECMAScript 1. <br />
+        ES1 : 1997, <br />
+        ES2, <br />
+        ES3, <br />
+        ES4, <br />
+        ES5 : 2009, <br />
+        In 2009, ES:5 had lots of new features and more people had started
+        engaging with it.
+      </p>
+      <p>
+        1.11 Now directly in 2015, comes ES:6 and it was the biggest update in
+        the history of javascript.
+      </p>
+      <p>
+        1.12 ECMA has a group known as TC39 (Technical Committee 39), which
+        decides what features should be there in the new JavaScript, etc. This
+        TC39 decided that they will release new version of JavaScript annually,
+        every year.
+      </p>
+      <hr />
     </div>
     <!-- 2. Backward Compatible, not Forward Compatible -->
     <div>
-        <h2>2. Backward Compatible, not Forward Compatible</h2>
-        <p>2.1 JavaScript is a Backward Compatible language, this means if an old feature which was developed or
-            introduced, let say 15 years ago, will also be easily work and perform in today's updated javascript
-            language.</p>
-        <p>2.2 But, javascript is not forward compatible, this means the new javascript feature, let say, which is
-            developed or introduced today will not be able to work on the old un-updated web browser.</p>
-        <p>2.3 The solution to this problem are some tools such as Babel, etc.</p>
-        <p>2.4 Babel transpile or converts the modern javascript code (which is written in today's updated
-            JavaScript language containing new features) to the un-updated browser's supporting old javascript language
-            and old features.</p>
-        <hr>
+      <h2>2. Backward Compatible, not Forward Compatible</h2>
+      <p>
+        2.1 JavaScript is a Backward Compatible language, this means if an old
+        feature which was developed or introduced, let say 15 years ago, will
+        also be easily work and perform in today's updated javascript language.
+      </p>
+      <p>
+        2.2 But, javascript is not forward compatible, this means the new
+        javascript feature, let say, which is developed or introduced today will
+        not be able to work on the old un-updated web browser.
+      </p>
+      <p>2.3 The solution to this problem are some tools such as Babel, etc.</p>
+      <p>
+        2.4 Babel transpile or converts the modern javascript code (which is
+        written in today's updated JavaScript language containing new features)
+        to the un-updated browser's supporting old javascript language and old
+        features.
+      </p>
+      <hr />
     </div>
     <!-- 3. defer attribute -->
     <div>
-        <h2>3. defer attribute</h2>
-        <p>3.1 The defer attribute is used in HTML script tags to defer the execution of a Javascript file until the
-            HTML page has finished parsing.</p>
-        <p>3.2 This means that the script will only be executed after the HTML has been completed loaded, parsed, and
-            displayed to the user. This is useful for optimizing page load times because it allows the HTML to be
-            displayed to the user faster, and the javascript can execute in the background.</p>
-        <p>3.3 If you want to add script tag in the head section of the html page, then you should add defer to the
-            script tag as it will be deferred until after the HTML has been fully loaded and parsed.</p>
-        <hr>
+      <h2>3. defer attribute</h2>
+      <p>
+        3.1 The defer attribute is used in HTML script tags to defer the
+        execution of a Javascript file until the HTML page has finished parsing.
+      </p>
+      <p>
+        3.2 This means that the script will only be executed after the HTML has
+        been completed loaded, parsed, and displayed to the user. This is useful
+        for optimizing page load times because it allows the HTML to be
+        displayed to the user faster, and the javascript can execute in the
+        background.
+      </p>
+      <p>
+        3.3 If you want to add script tag in the head section of the html page,
+        then you should add defer to the script tag as it will be deferred until
+        after the HTML has been fully loaded and parsed.
+      </p>
+      <hr />
     </div>
     <!-- 4. "use strict" -->
     <div>
-        <h2>4. "use strict"</h2>
-        <p>4.1 The "use strict" statement is a directive that enables stricter parsing and error handling in your
-            javascript code. When used, it will enforce stricter rules for syntax, variable declaration, and other
-            common mistakes.</p>
-        <p>4.2 Note that "use strict" must be placed at the top of your JavaScript file or function in order to take
-            effect. </p>
-        <hr>
+      <h2>4. "use strict"</h2>
+      <p>
+        4.1 The "use strict" statement is a directive that enables stricter
+        parsing and error handling in your javascript code. When used, it will
+        enforce stricter rules for syntax, variable declaration, and other
+        common mistakes.
+      </p>
+      <p>
+        4.2 Note that "use strict" must be placed at the top of your JavaScript
+        file or function in order to take effect.
+      </p>
+      <hr />
     </div>
     <!-- 5. Conventions and Rules -->
     <div>
-        <h2>5. Conventions and Rules</h2>
-        <p>5.1 Always start with the small letter and use camelCase or snake_case.</p>
-        <p>5.2 You cannot use spaces.</p>
-        <p>5.3 You can use only underscore or dollar symbol.</p>
-        <p>5.4 You cannot start with a number.</p>
-        <hr>
+      <h2>5. Conventions and Rules</h2>
+      <p>
+        5.1 Always start with the small letter and use camelCase or snake_case.
+      </p>
+      <p>5.2 You cannot use spaces.</p>
+      <p>5.3 You can use only underscore or dollar symbol.</p>
+      <p>5.4 You cannot start with a number.</p>
+      <hr />
     </div>
     <!-- 6. String -->
     <div>
-        <h2>6. String </h2>
-        <p>6.1 In javascript, a string is a sequence of characters enclosed in single quotes(' ') or double quotes(" ").
-        </p>
-        <p>6.2 Strings are used to represent textual data and can contain letters, numbers, symbols, and whitespace.</p>
-        <p>6.3 Strings are immutable, which means that once a string is created, its value cannot be changed. However,
-            you can create new strings based on existing ones using various string methods or concatenation.</p>
-        <hr>
+      <h2>6. String</h2>
+      <p>
+        6.1 In javascript, a string is a sequence of characters enclosed in
+        single quotes(' ') or double quotes(" ").
+      </p>
+      <p>
+        6.2 Strings are used to represent textual data and can contain letters,
+        numbers, symbols, and whitespace.
+      </p>
+      <p>
+        6.3 Strings are immutable, which means that once a string is created,
+        its value cannot be changed. However, you can create new strings based
+        on existing ones using various string methods or concatenation.
+      </p>
+      <hr />
     </div>
     <!-- 7. == v === -->
     <div>
-        <h2>7. == v ===</h2>
-        <p>7.1 == only checks the value of the variables are equal or not irrespective of their different data-type, if
-            the value of the variables are equal than it will return true otherwise false.</p>
-        <p>7.2 == only checks the value of the variable and not the data-type to the variable.</p>
-        <p>7.3 === checks both value of the variables as well as the data-type of the variables. If both the value and
-            datatype of a variable equals or matches the value and datatype of another variable, then it will return
-            true, otherwise if any one value or datatype doesn't matches, it will return false.</p>
-        <hr>
+      <h2>7. == v ===</h2>
+      <p>
+        7.1 == only checks the value of the variables are equal or not
+        irrespective of their different data-type, if the value of the variables
+        are equal than it will return true otherwise false.
+      </p>
+      <p>
+        7.2 == only checks the value of the variable and not the data-type to
+        the variable.
+      </p>
+      <p>
+        7.3 === checks both value of the variables as well as the data-type of
+        the variables. If both the value and datatype of a variable equals or
+        matches the value and datatype of another variable, then it will return
+        true, otherwise if any one value or datatype doesn't matches, it will
+        return false.
+      </p>
+      <hr />
     </div>
     <!-- 8. Ternary Operator -->
     <div>
-        <h2>8. Ternary Operator</h2>
-        <p>8.1 The ternary operator in javascript is a concise way to write conditional statements. It allows you to
-            evaluate a condition and return one of two expression based on the result of the condition.</p>
-        <p>8.2 The ternary operator is often used as a shorthand alternative to writing if-else statements. It's useful
-            when you need to assign a value to a variable or return a value based on a condition.</p>
-        <p>8.3 Using the ternary operator can make your code more concise and readable, especially for simple
-            conditional assignments or returns.</p>
-        <p>8.4 However, it's important to use it judiciously to maintain code clarity and avoid excessive nesting, which
-            can make the code harder to understand.</p>
-        <hr>
+      <h2>8. Ternary Operator</h2>
+      <p>
+        8.1 The ternary operator in javascript is a concise way to write
+        conditional statements. It allows you to evaluate a condition and return
+        one of two expression based on the result of the condition.
+      </p>
+      <p>
+        8.2 The ternary operator is often used as a shorthand alternative to
+        writing if-else statements. It's useful when you need to assign a value
+        to a variable or return a value based on a condition.
+      </p>
+      <p>
+        8.3 Using the ternary operator can make your code more concise and
+        readable, especially for simple conditional assignments or returns.
+      </p>
+      <p>
+        8.4 However, it's important to use it judiciously to maintain code
+        clarity and avoid excessive nesting, which can make the code harder to
+        understand.
+      </p>
+      <hr />
     </div>
     <!-- 9. Switch Statement -->
     <div>
-        <h2>9. Switch Statement</h2>
-        <p>9.1 A switch statement in javascript is a control flow statement that allows you to perform different actions
-            based on different conditions.</p>
-        <p>9.2 It provides a more concise and organized way to write multiple 'if...else' statement.</p>
-        <p>9.3 The switch statement is a useful tool when you have multiple conditions to check against a single
-            expression. It provides a clearer and more efficient alternative to writing multiple 'if...else' statements.
-        </p>
-        <hr>
+      <h2>9. Switch Statement</h2>
+      <p>
+        9.1 A switch statement in javascript is a control flow statement that
+        allows you to perform different actions based on different conditions.
+      </p>
+      <p>
+        9.2 It provides a more concise and organized way to write multiple
+        'if...else' statement.
+      </p>
+      <p>
+        9.3 The switch statement is a useful tool when you have multiple
+        conditions to check against a single expression. It provides a clearer
+        and more efficient alternative to writing multiple 'if...else'
+        statements.
+      </p>
+      <hr />
     </div>
     <!-- 10. While Loop -->
     <div>
-        <h2>10. While Loop</h2>
-        <p>10.1 In javascript, a while loop is a control flow statement that allows you to repeatedly execute a block of
-            code as long as a specified condition is true.</p>
-        <p>10.2 Remember to ensure that the condition within the while loop eventually becomes false; otherwise, the
-            loop will continue indefinitely, resulting in an infinite loop.</p>
-        <p>10.3 It's important to include a mechanism within the loop to modify the condition and eventually exit the
-            loop.</p>
-        <hr>
+      <h2>10. While Loop</h2>
+      <p>
+        10.1 In javascript, a while loop is a control flow statement that allows
+        you to repeatedly execute a block of code as long as a specified
+        condition is true.
+      </p>
+      <p>
+        10.2 Remember to ensure that the condition within the while loop
+        eventually becomes false; otherwise, the loop will continue
+        indefinitely, resulting in an infinite loop.
+      </p>
+      <p>
+        10.3 It's important to include a mechanism within the loop to modify the
+        condition and eventually exit the loop.
+      </p>
+      <hr />
     </div>
     <!-- 11. for Loop -->
     <div>
-        <h2>11. for Loop</h2>
-        <p>11.1 In JavaScript, a for loop is used to repeatedly execute a block of code for a specific number of
-            iterations. It consists of three parts: initialization, condition, and iteration expression.</p>
-        <hr>
+      <h2>11. for Loop</h2>
+      <p>
+        11.1 In JavaScript, a for loop is used to repeatedly execute a block of
+        code for a specific number of iterations. It consists of three parts:
+        initialization, condition, and iteration expression.
+      </p>
+      <hr />
     </div>
     <!-- 12. Break keyword -->
     <div>
-        <h2>12. Break keyword</h2>
-        <p>12.1 In JavaScript, the break keyword is used within loops to exit the loop prematurely. It is typically used
-            in conjunction with an if statement to test for a certain condition and then exit the loop if the condition
-            is met. </p>
-        <p>12.2 The break keyword can also be used with nested loops to exit the innermost loop.</p>
-        <hr>
+      <h2>12. Break keyword</h2>
+      <p>
+        12.1 In JavaScript, the break keyword is used within loops to exit the
+        loop prematurely. It is typically used in conjunction with an if
+        statement to test for a certain condition and then exit the loop if the
+        condition is met.
+      </p>
+      <p>
+        12.2 The break keyword can also be used with nested loops to exit the
+        innermost loop.
+      </p>
+      <hr />
     </div>
     <!-- 13. Continue keyword -->
     <div>
-        <h2>13. Continue keyword</h2>
-        <p>13.1 In Javascript, the continue keyword is used inside loop structures (such as 'for', 'while', or
-            'do...while') to skip the rest of the current iteration and move on to the next iteration. It is primarily
-            used to control the flow within loops.</p>
-        <p>13.2 When the continue statement is encountered, the remaining code inside the loop block for the current
-            iteration is skipped, and the loop immediately proceeds to the next iteration.</p>
-        <p>13.3 The continue statement is handy when you want to execute specific values or conditions from being
-            processed within a loop and proceed to the next iteration.</p>
-        <hr>
+      <h2>13. Continue keyword</h2>
+      <p>
+        13.1 In Javascript, the continue keyword is used inside loop structures
+        (such as 'for', 'while', or 'do...while') to skip the rest of the
+        current iteration and move on to the next iteration. It is primarily
+        used to control the flow within loops.
+      </p>
+      <p>
+        13.2 When the continue statement is encountered, the remaining code
+        inside the loop block for the current iteration is skipped, and the loop
+        immediately proceeds to the next iteration.
+      </p>
+      <p>
+        13.3 The continue statement is handy when you want to execute specific
+        values or conditions from being processed within a loop and proceed to
+        the next iteration.
+      </p>
+      <hr />
     </div>
     <!-- 14. do while loop -->
     <div>
-        <h2>14. do while loop</h2>
-        <p>14.1 The do while loop is a variation of the while loop. The do-while loop executes a block of code
-            repeatedly until a specified condition evaluates to false.</p>
-        <p>14.2 The key difference between the do-while and the while-loop is that the do-while loop always executes the
-            block of code at least once, regardless of whether the condition is initially true or false.</p>
-        <p>14.3 It's important to ensure that the condition within the while statement eventually evaluates to false;
-            otherwise, the loop will continue indefinitely, resulting in an infinite loop.</p>
-        <hr>
+      <h2>14. do while loop</h2>
+      <p>
+        14.1 The do while loop is a variation of the while loop. The do-while
+        loop executes a block of code repeatedly until a specified condition
+        evaluates to false.
+      </p>
+      <p>
+        14.2 The key difference between the do-while and the while-loop is that
+        the do-while loop always executes the block of code at least once,
+        regardless of whether the condition is initially true or false.
+      </p>
+      <p>
+        14.3 It's important to ensure that the condition within the while
+        statement eventually evaluates to false; otherwise, the loop will
+        continue indefinitely, resulting in an infinite loop.
+      </p>
+      <hr />
     </div>
     <!-- 15. Reference Data Types -->
     <div>
-        <h2>15. Reference Data Types</h2>
-        <p>15.1 They are dynamic in nature, i.e, they do not have a fixed size.</p>
-        <p>15.2 Most of them are considered as objects, and therefore have methods.</p>
-        <p>15.3 Such as - Arrays, functions, collections and all other object types. </p>
-        <hr>
+      <h2>15. Reference Data Types</h2>
+      <p>
+        15.1 They are dynamic in nature, i.e, they do not have a fixed size.
+      </p>
+      <p>
+        15.2 Most of them are considered as objects, and therefore have methods.
+      </p>
+      <p>
+        15.3 Such as - Arrays, functions, collections and all other object
+        types.
+      </p>
+      <hr />
     </div>
     <!-- 16. Arrays -->
     <div>
-        <h2>16. Arrays</h2>
-        <p>16.1 An ordered collection of items or elements is commonly called as an array. </p>
-        <p>16.2 An array is a data structure that allows you to store multiple values in a single variable. Arrays can
-            hold elements of any data type, including numbers, strings, objects, and even other arrays.</p>
-        <p>16.3 Arrays in Javascript are dynamic, meaning their size can change dynamically by adding or removing
-            elements. </p>
-        <p>16.4 Arrays are mutable, which means that their elements can be modified after they have been created.</p>
-        <p>16.5 In javascript, push() and pop() methods are generally faster than the unshift() and shift() methods. The
-            reason for this is that push() and pop() only modify the last element of the array, whereas unshift() and
-            shift() modify the first element of the array, which requires shifting all the remaining elements to new
-            indexes. </p>
-        <hr>
+      <h2>16. Arrays</h2>
+      <p>
+        16.1 An ordered collection of items or elements is commonly called as an
+        array.
+      </p>
+      <p>
+        16.2 An array is a data structure that allows you to store multiple
+        values in a single variable. Arrays can hold elements of any data type,
+        including numbers, strings, objects, and even other arrays.
+      </p>
+      <p>
+        16.3 Arrays in Javascript are dynamic, meaning their size can change
+        dynamically by adding or removing elements.
+      </p>
+      <p>
+        16.4 Arrays are mutable, which means that their elements can be modified
+        after they have been created.
+      </p>
+      <p>
+        16.5 In javascript, push() and pop() methods are generally faster than
+        the unshift() and shift() methods. The reason for this is that push()
+        and pop() only modify the last element of the array, whereas unshift()
+        and shift() modify the first element of the array, which requires
+        shifting all the remaining elements to new indexes.
+      </p>
+      <hr />
     </div>
     <!-- 17. Primitive v Reference Data Types -->
     <div>
-        <h2>17. Primitive v Reference Data Types</h2>
-        <p>17.1 When you assign a primitive data type (such as number) to a variable, the value is copied to the
-            variable.</p>
-        <p>17.2 This means that changes made to the value of one variable will not affect the value of the another
-            variable that was assigned the same value.</p>
-        <p>17.3 Arrays are reference data types in javascript. When you assign an array to a variable, the variable
-            actually stores a reference to the array in memory.</p>
-        <p>17.4 When you assign a reference type to another variable, both variables refer to the same object in memory.
-            Therefore, changes made to the object through one variable are reflected in the other variable as well.</p>
-        <hr>
+      <h2>17. Primitive v Reference Data Types</h2>
+      <p>
+        17.1 When you assign a primitive data type (such as number) to a
+        variable, the value is copied to the variable.
+      </p>
+      <p>
+        17.2 This means that changes made to the value of one variable will not
+        affect the value of the another variable that was assigned the same
+        value.
+      </p>
+      <p>
+        17.3 Arrays are reference data types in javascript. When you assign an
+        array to a variable, the variable actually stores a reference to the
+        array in memory.
+      </p>
+      <p>
+        17.4 When you assign a reference type to another variable, both
+        variables refer to the same object in memory. Therefore, changes made to
+        the object through one variable are reflected in the other variable as
+        well.
+      </p>
+      <hr />
     </div>
     <!-- 18. Objects or Object Literals -->
     <div>
-        <h2>18. Objects or Object Literals</h2>
-        <p>18.1 Arrays are good but are not sufficient enough for the real world data. So, for this we need objects.</p>
-        <p>18.2 Objects store key, value pairs.</p>
-        <p>18.3 Objects don't have index.</p>
-        <p>18.4 It is a versatile and powerful feature that enables you to represent complex entities and their
-            properties. Objects can contain various types of values, including other objects, arrays, functions and
-            primitive data types. </p>
-        <p>18.5 They are dynamic, which means you can add, remove, or modify properties and methods at runtime. They
-            provide a flexible way to represent and manipulate data structures, making them an essential part of
-            javascript programming. </p>
-        <p>18.6 Object keys are always string or symbol, even if you use another data type as the key. So, you can also
-            create an object like using double quotation.</p>
-        <hr>
+      <h2>18. Objects or Object Literals</h2>
+      <p>
+        18.1 Arrays are good but are not sufficient enough for the real world
+        data. So, for this we need objects.
+      </p>
+      <p>18.2 Objects store key, value pairs.</p>
+      <p>18.3 Objects don't have index.</p>
+      <p>
+        18.4 It is a versatile and powerful feature that enables you to
+        represent complex entities and their properties. Objects can contain
+        various types of values, including other objects, arrays, functions and
+        primitive data types.
+      </p>
+      <p>
+        18.5 They are dynamic, which means you can add, remove, or modify
+        properties and methods at runtime. They provide a flexible way to
+        represent and manipulate data structures, making them an essential part
+        of javascript programming.
+      </p>
+      <p>
+        18.6 Object keys are always string or symbol, even if you use another
+        data type as the key. So, you can also create an object like using
+        double quotation.
+      </p>
+      <hr />
     </div>
     <!-- 19. Dot v Bracket Notation -->
     <div>
-        <h2>19. Dot v Bracket Notation</h2>
-        <p>19.1 Dot Notation is more concise and easier to read for simple property access, while bracket notation is
-            more versatile and allows for dynamic and complex property access.</p>
-        <p>19.2 In general, dot notation is the preferred choice for accessing object properties when the property name
-            is known in advance and is a valid identifier. Bracket notation is more flexible and allows for dynamic
-            property access, making it suitable for scenarios where the property names are determined dynamically or
-            contain special characters. </p>
-        <hr>
+      <h2>19. Dot v Bracket Notation</h2>
+      <p>
+        19.1 Dot Notation is more concise and easier to read for simple property
+        access, while bracket notation is more versatile and allows for dynamic
+        and complex property access.
+      </p>
+      <p>
+        19.2 In general, dot notation is the preferred choice for accessing
+        object properties when the property name is known in advance and is a
+        valid identifier. Bracket notation is more flexible and allows for
+        dynamic property access, making it suitable for scenarios where the
+        property names are determined dynamically or contain special characters.
+      </p>
+      <hr />
     </div>
     <!-- 20. Function Declaration -->
     <div>
-        <h2>20. Function Declaration</h2>
-        <p>20.1 In javascript, function declarations are used to create named functions that can be called later in
-            the code. A function declaration consists of the 'function' keyword followed by the name of the
-            function, a list of parameters enclosed in parentheses, and the function body enclosed in curly braces.
-        </p>
-        <p>20.2 It's important to note that function declarations create functions as variables in the current
-            scope. Therefore, they can be accessed and called from anywhere within the scope.</p>
-        <p>20.3 Function declarations are particularly useful when you want to create reusable pieces of code that
-            can be called multiple times throughout your program.</p>
-        <p>20.4 Calling a function and invoking a function refer to the same thing - the act of executing a
-            function in a program.</p>
-        <p>20.5 The purpose of the return statement is to exit the function as soon as the target value is found.
-            Without the 'return' statement, the function would continue iterating through the rest of the array even
-            after the target value is changed. </p>
-        <hr>
+      <h2>20. Function Declaration</h2>
+      <p>
+        20.1 In javascript, function declarations are used to create named
+        functions that can be called later in the code. A function declaration
+        consists of the 'function' keyword followed by the name of the function,
+        a list of parameters enclosed in parentheses, and the function body
+        enclosed in curly braces.
+      </p>
+      <p>
+        20.2 It's important to note that function declarations create functions
+        as variables in the current scope. Therefore, they can be accessed and
+        called from anywhere within the scope.
+      </p>
+      <p>
+        20.3 Function declarations are particularly useful when you want to
+        create reusable pieces of code that can be called multiple times
+        throughout your program.
+      </p>
+      <p>
+        20.4 Calling a function and invoking a function refer to the same thing
+        - the act of executing a function in a program.
+      </p>
+      <p>
+        20.5 The purpose of the return statement is to exit the function as soon
+        as the target value is found. Without the 'return' statement, the
+        function would continue iterating through the rest of the array even
+        after the target value is changed.
+      </p>
+      <hr />
     </div>
     <!-- 21. Function Expression -->
     <div>
-        <h2>21. Function Expression</h2>
-        <p>21.1 In javascript, a function expression involves assigning a function to a variable or a constant. Function
-            expressions can be named or anonymous.</p>
-        <p>21.2 Function expressions provide a way to create functions on the fly, assign them to variables, and use
-            them in various contexts within javascript. </p>
-        <hr>
+      <h2>21. Function Expression</h2>
+      <p>
+        21.1 In javascript, a function expression involves assigning a function
+        to a variable or a constant. Function expressions can be named or
+        anonymous.
+      </p>
+      <p>
+        21.2 Function expressions provide a way to create functions on the fly,
+        assign them to variables, and use them in various contexts within
+        javascript.
+      </p>
+      <hr />
     </div>
     <!-- 22. Arrow Functions -->
     <div>
-        <h2>22. Arrow Functions</h2>
-        <p>22.1 Arrow functions also known as fat arrow functions, are a concise syntax introduced in ECMAScript 6 (ES6)
-            for creating functions in Javascript.</p>
-        <p>22.2 They provide a shorter syntax compared to traditional function expressions and lexically bind this
-            value, resulting in some differences in behavior. </p>
-        <p>22.3 Arrow functions are used in scenarios where a concise and lexical 'this' binding is desired, such as in
-            event handlers, array methods like map(), filter() and reduce() and when working with a asynchronous
-            functions.</p>
-        <p>22.4 It's important to note that arrow functions are not suitable for all use cases, particularly when
-            dynamic scoping or the this value is needed. In such cases, traditional function expressions are still the
-            appropriate choice.</p>
-        <p>22.5 You can remove the parentheses, curly braces and return keyword when using an arrow function in
-            javascript if you have only one parameter to pass. </p>
-        <hr>
+      <h2>22. Arrow Functions</h2>
+      <p>
+        22.1 Arrow functions also known as fat arrow functions, are a concise
+        syntax introduced in ECMAScript 6 (ES6) for creating functions in
+        Javascript.
+      </p>
+      <p>
+        22.2 They provide a shorter syntax compared to traditional function
+        expressions and lexically bind this value, resulting in some differences
+        in behavior.
+      </p>
+      <p>
+        22.3 Arrow functions are used in scenarios where a concise and lexical
+        'this' binding is desired, such as in event handlers, array methods like
+        map(), filter() and reduce() and when working with a asynchronous
+        functions.
+      </p>
+      <p>
+        22.4 It's important to note that arrow functions are not suitable for
+        all use cases, particularly when dynamic scoping or the this value is
+        needed. In such cases, traditional function expressions are still the
+        appropriate choice.
+      </p>
+      <p>
+        22.5 You can remove the parentheses, curly braces and return keyword
+        when using an arrow function in javascript if you have only one
+        parameter to pass.
+      </p>
+      <hr />
     </div>
     <!-- 23. Function Declaration v Function Expression v Arrow Function -->
     <div>
-        <h2>23. Function Declaration v Function Expression v Arrow Function</h2>
-        <p>23.1 The choice between function declarations, function expressions, and arrow functions depends on the
-            specific context and requirements of your code. Each type of function has its own strengths and use cases.
-        </p>
-        <p>23.2 Scope and hoisting requirements: If you need the function to be accessible throughout the entire scope
-            and be hoisted, function declarations are suitable choice. Otherwise, function expressions or arrow
-            functions can be used. </p>
-        <p>23.3 Readability and code style: Arrow functions provide a more concise syntax, which can enhance code
-            readability, especially for simple and short functions. However, for more complex functions, traditional
-            function declarations or expression may be easier to understand. </p>
-        <p>23.4 'this' binding: Arrow functions have a lexically bound this value, which can be advantageous in certain
-            cases. If you rely on dynamic scoping or need to manipulate the this value, regular functions or function
-            expressions may be more appropriate. </p>
-        <p>23.5 In summary, there is no single best type of function. Each has its own strengths and use cases, so
-            choose the one that best suits the specific requirements and coding style of your project. </p>
-        <hr>
+      <h2>23. Function Declaration v Function Expression v Arrow Function</h2>
+      <p>
+        23.1 The choice between function declarations, function expressions, and
+        arrow functions depends on the specific context and requirements of your
+        code. Each type of function has its own strengths and use cases.
+      </p>
+      <p>
+        23.2 Scope and hoisting requirements: If you need the function to be
+        accessible throughout the entire scope and be hoisted, function
+        declarations are suitable choice. Otherwise, function expressions or
+        arrow functions can be used.
+      </p>
+      <p>
+        23.3 Readability and code style: Arrow functions provide a more concise
+        syntax, which can enhance code readability, especially for simple and
+        short functions. However, for more complex functions, traditional
+        function declarations or expression may be easier to understand.
+      </p>
+      <p>
+        23.4 'this' binding: Arrow functions have a lexically bound this value,
+        which can be advantageous in certain cases. If you rely on dynamic
+        scoping or need to manipulate the this value, regular functions or
+        function expressions may be more appropriate.
+      </p>
+      <p>
+        23.5 In summary, there is no single best type of function. Each has its
+        own strengths and use cases, so choose the one that best suits the
+        specific requirements and coding style of your project.
+      </p>
+      <hr />
     </div>
     <!-- 24. Hoisting -->
     <div>
-        <h2>24. Hoisting</h2>
-        <p>24.1 Hoisting is a JavaScript mechanism that allows variables and function declaration to be moved to the top
-            of their respective scopes during the compilation phase. </p>
-        <p>24.2 Hoisting is a concept specific to variable and function declarations, not their initialization or
-            assignments. The actual assignment or initialization still happens at the original position in the code.</p>
-        <p>24.3 Variable Hoisting (var, let and const): When variable are hoisted, the variable declaration are moved to
-            the top of their scope while keeping their assignments in place. However, only the declarations are hoisted,
-            not the initializations. If you access a variable before its declaration, it will have the value
-            'undefined'.</p>
-        <p>24.4 Function Hoisting: Function declarations are fully hoisted, which means that both the function name and
-            its body are moved to the top of the scope. As a result, you can call a function before its actual
-            declaration in the code.</p>
-        <p>24.5 Hoisting with Function Expression: Function expressions, which are assigned to variables, are not
-            hoisted in the same way as function declarations. Only the variable declaration is hoisted, not the function
-            assignment. </p>
-        <p>24.6 It's important to understand hoisting to avoid unexpected behavior and write clear and maintainable
-            code. To ensure code clarity, it is generally recommended to declare variables at the top of their scope and
-            declare functions before they are used, regardless of hoisting behavior. </p>
-        <hr>
+      <h2>24. Hoisting</h2>
+      <p>
+        24.1 Hoisting is a JavaScript mechanism that allows variables and
+        function declaration to be moved to the top of their respective scopes
+        during the compilation phase.
+      </p>
+      <p>
+        24.2 Hoisting is a concept specific to variable and function
+        declarations, not their initialization or assignments. The actual
+        assignment or initialization still happens at the original position in
+        the code.
+      </p>
+      <p>
+        24.3 Variable Hoisting (var, let and const): When variable are hoisted,
+        the variable declaration are moved to the top of their scope while
+        keeping their assignments in place. However, only the declarations are
+        hoisted, not the initializations. If you access a variable before its
+        declaration, it will have the value 'undefined'.
+      </p>
+      <p>
+        24.4 Function Hoisting: Function declarations are fully hoisted, which
+        means that both the function name and its body are moved to the top of
+        the scope. As a result, you can call a function before its actual
+        declaration in the code.
+      </p>
+      <p>
+        24.5 Hoisting with Function Expression: Function expressions, which are
+        assigned to variables, are not hoisted in the same way as function
+        declarations. Only the variable declaration is hoisted, not the function
+        assignment.
+      </p>
+      <p>
+        24.6 It's important to understand hoisting to avoid unexpected behavior
+        and write clear and maintainable code. To ensure code clarity, it is
+        generally recommended to declare variables at the top of their scope and
+        declare functions before they are used, regardless of hoisting behavior.
+      </p>
+      <hr />
     </div>
     <!-- 25. Functions inside function -->
     <div>
-        <h2>25. Functions inside function</h2>
-        <p>25.1 When a function is defined inside another function, it is referred to as a "nested function" or "inner
-            function". The outer function is commonly known as the "parent function" or "containing function".</p>
-        <p>25.2 It's important to note that inner functions are only accessible within the scope of the outer function.
-            They cannot be directly called from outside the outer function. However, if the outer function returns the
-            inner function or exposes it through an object, you can invoke the inner function from the outside. </p>
-        <hr>
+      <h2>25. Functions inside function</h2>
+      <p>
+        25.1 When a function is defined inside another function, it is referred
+        to as a "nested function" or "inner function". The outer function is
+        commonly known as the "parent function" or "containing function".
+      </p>
+      <p>
+        25.2 It's important to note that inner functions are only accessible
+        within the scope of the outer function. They cannot be directly called
+        from outside the outer function. However, if the outer function returns
+        the inner function or exposes it through an object, you can invoke the
+        inner function from the outside.
+      </p>
+      <hr />
     </div>
     <!-- 26. Lexical Scope -->
     <div>
-        <h2>26. Lexical Scope</h2>
-        <p>26.1 It refers to the scope resolution of variables and functions based on the static structure of the code,
-            specifically the location where the variables and functions are defined in the source code. Lexical scope
-            determines how variable names are resolved during the execution of the code. </p>
-        <p>26.2 When a variable or function is defined inside another function, the inner function has access to the
-            variables and functions of its outer function. This access is possible because javascript uses lexical
-            scoping. Lexical scoping means that the scope of a variable or function is determined by its position in the
-            source code during the lexical analysis phase, regardless of where it is called during the runtime. </p>
-        <p>26.3 It is important for understanding how variables are resolved and accessed in javascript. It helps create
-            encapsulation and enables the use of of closures, where functions retain access to variables even after
-            their outer function has finished executing.</p>
-        <hr>
+      <h2>26. Lexical Scope</h2>
+      <p>
+        26.1 It refers to the scope resolution of variables and functions based
+        on the static structure of the code, specifically the location where the
+        variables and functions are defined in the source code. Lexical scope
+        determines how variable names are resolved during the execution of the
+        code.
+      </p>
+      <p>
+        26.2 When a variable or function is defined inside another function, the
+        inner function has access to the variables and functions of its outer
+        function. This access is possible because javascript uses lexical
+        scoping. Lexical scoping means that the scope of a variable or function
+        is determined by its position in the source code during the lexical
+        analysis phase, regardless of where it is called during the runtime.
+      </p>
+      <p>
+        26.3 It is important for understanding how variables are resolved and
+        accessed in javascript. It helps create encapsulation and enables the
+        use of of closures, where functions retain access to variables even
+        after their outer function has finished executing.
+      </p>
+      <hr />
     </div>
     <!-- 27. Block Scope v Function Scope -->
     <div>
-        <h2>27. Block Scope v Function Scope</h2>
-        <p>27.1 let and const are block scope.</p>
-        <p>27.2 var is a function scope.</p>
-        <p>27.3 Block Scope refers to the visibility and lifetime of variables and functions within a block of code,
-            which is typically defined by a pair of curly braces. Block scope was introduced in ECMAScript 6 (ES6) with
-            the let and const keywords. Variables defined with the let and const are block-scoped and are accessible
-            only within the block they are defined in. </p>
-        <p>27.4 Function Scope refers to the visibility and lifetime of variables and functions within the enclosing
-            function. Variables declared with the var keyword have function scope and are accessible throughout the
-            entire function, regardless of where they are defined within the function. </p>
-        <p>27.5 Block scope allows for better encapsulation and reduces the likelihood of variable collisions and
-            unintended access. </p>
-        <hr>
+      <h2>27. Block Scope v Function Scope</h2>
+      <p>27.1 let and const are block scope.</p>
+      <p>27.2 var is a function scope.</p>
+      <p>
+        27.3 Block Scope refers to the visibility and lifetime of variables and
+        functions within a block of code, which is typically defined by a pair
+        of curly braces. Block scope was introduced in ECMAScript 6 (ES6) with
+        the let and const keywords. Variables defined with the let and const are
+        block-scoped and are accessible only within the block they are defined
+        in.
+      </p>
+      <p>
+        27.4 Function Scope refers to the visibility and lifetime of variables
+        and functions within the enclosing function. Variables declared with the
+        var keyword have function scope and are accessible throughout the entire
+        function, regardless of where they are defined within the function.
+      </p>
+      <p>
+        27.5 Block scope allows for better encapsulation and reduces the
+        likelihood of variable collisions and unintended access.
+      </p>
+      <hr />
     </div>
     <!-- 28. Default parameters -->
     <div>
-        <h2>28. Default parameters</h2>
-        <p>28.1 Default parameters allow you to assign default values to function parameters if no argument or an
-            undefined value is passed when calling the function. Default parameters were introduced in ECMAScript 2015
-            (ES6) and are a convenient way to handle missing or undefined values. </p>
-        <p>28.2 It is worth noting that default parameters are evaluated at the time the function is called, no when
-            it's defined.</p>
-        <p>28.3 This allows you to use variables or expressions as default values. However, if a default parameter
-            depends on the value of another parameter, you need to be cautious about the order in which the parameters
-            are defined.</p>
-        <p>28.4 Additionally, default parameters work with any function, not just named function. They can be used with
-            arrow functions, methods, and even function expressions. </p>
-        <hr>
+      <h2>28. Default parameters</h2>
+      <p>
+        28.1 Default parameters allow you to assign default values to function
+        parameters if no argument or an undefined value is passed when calling
+        the function. Default parameters were introduced in ECMAScript 2015
+        (ES6) and are a convenient way to handle missing or undefined values.
+      </p>
+      <p>
+        28.2 It is worth noting that default parameters are evaluated at the
+        time the function is called, no when it's defined.
+      </p>
+      <p>
+        28.3 This allows you to use variables or expressions as default values.
+        However, if a default parameter depends on the value of another
+        parameter, you need to be cautious about the order in which the
+        parameters are defined.
+      </p>
+      <p>
+        28.4 Additionally, default parameters work with any function, not just
+        named function. They can be used with arrow functions, methods, and even
+        function expressions.
+      </p>
+      <hr />
     </div>
     <!-- 29. Rest parameters -->
     <div>
-        <h2>29. Rest parameters</h2>
-        <p>29.1 Rest parameters allow you to present an indefinite number of arguments as an array with a function. Rest
-            parameter were introduced in ECMAScript 2015 (ES6) and provide a concise way to work with variable-length
-            argument lists. </p>
-        <p>29.2 They are useful when you want to work with functions that can accept a variable number of arguments.
-            Instead of accessing the argument through the 'arguments' object, you can use the rest parameter to gather
-            them conveniently into an array. </p>
-        <p>29.3 They must be the last parameter in the function's parameter list, as it collects all remaining
-            arguments. If desired, you can have regular parameters before the rest parameter. </p>
-        <p>29.4 The spread syntax can be used to pass an array to a function as separate argument. This is the inverse
-            of rest parameter, where the spread syntax spread an array into individual arguments. </p>
-        <hr>
+      <h2>29. Rest parameters</h2>
+      <p>
+        29.1 Rest parameters allow you to present an indefinite number of
+        arguments as an array with a function. Rest parameter were introduced in
+        ECMAScript 2015 (ES6) and provide a concise way to work with
+        variable-length argument lists.
+      </p>
+      <p>
+        29.2 They are useful when you want to work with functions that can
+        accept a variable number of arguments. Instead of accessing the argument
+        through the 'arguments' object, you can use the rest parameter to gather
+        them conveniently into an array.
+      </p>
+      <p>
+        29.3 They must be the last parameter in the function's parameter list,
+        as it collects all remaining arguments. If desired, you can have regular
+        parameters before the rest parameter.
+      </p>
+      <p>
+        29.4 The spread syntax can be used to pass an array to a function as
+        separate argument. This is the inverse of rest parameter, where the
+        spread syntax spread an array into individual arguments.
+      </p>
+      <hr />
     </div>
     <!-- 30. Parameter Destructuring -->
     <div>
-        <h2>30. Parameter Destructuring</h2>
-        <p>30.1 Parameter Destructuring allows you to extract individual values from an object or an array and assign
-            them to variables within the function parameter list. It provides a concise way to access specific
-            properties or elements of complex data structures. </p>
-        <p>30.2 It is a powerful technique that allows you to access specific values from objects or arrays more
-            conveniently within function parameters. It can help simplify code and make it more readable, especially
-            when working with complex data structures. </p>
-        <hr>
+      <h2>30. Parameter Destructuring</h2>
+      <p>
+        30.1 Parameter Destructuring allows you to extract individual values
+        from an object or an array and assign them to variables within the
+        function parameter list. It provides a concise way to access specific
+        properties or elements of complex data structures.
+      </p>
+      <p>
+        30.2 It is a powerful technique that allows you to access specific
+        values from objects or arrays more conveniently within function
+        parameters. It can help simplify code and make it more readable,
+        especially when working with complex data structures.
+      </p>
+      <hr />
     </div>
     <!-- 31. Callback / Higher Order Functions -->
     <div>
-        <h2>31. Callback / Higher Order Functions</h2>
-        <p>31.1 Higher-order functions can take other functions as arguments and/or return functions as their results.
-            Essentially, they treat functions as values, enabling powerful functional programming patterns and
-            abstraction. </p>
-        <p>31.2 A callback function is a function that is passed as an argument to another function and is invoked or
-            called within that function. Callback functions are a fundamental concept in Javascript, especially in
-            asynchronous programming and event handling. </p>
-        <p>31.3 They are often used in scenarios where an operation takes time to complete, such as making an
-            asynchronous request or waiting for an event to occur. The callback function allows you to specify what
-            action should be taken once the operation is finished or the event is triggered. </p>
-        <p>31.4 Asynchronous functions in javascript commonly use callbacks to handle the result or error of an
-            operation.</p>
-        <p>31.5 They allow for more flexible and dynamic programming patterns, such as executing different actions
-            depending on the outcome of a function or operation.</p>
-        <hr>
+      <h2>31. Callback / Higher Order Functions</h2>
+      <p>
+        31.1 Higher-order functions can take other functions as arguments and/or
+        return functions as their results. Essentially, they treat functions as
+        values, enabling powerful functional programming patterns and
+        abstraction.
+      </p>
+      <p>
+        31.2 A callback function is a function that is passed as an argument to
+        another function and is invoked or called within that function. Callback
+        functions are a fundamental concept in Javascript, especially in
+        asynchronous programming and event handling.
+      </p>
+      <p>
+        31.3 They are often used in scenarios where an operation takes time to
+        complete, such as making an asynchronous request or waiting for an event
+        to occur. The callback function allows you to specify what action should
+        be taken once the operation is finished or the event is triggered.
+      </p>
+      <p>
+        31.4 Asynchronous functions in javascript commonly use callbacks to
+        handle the result or error of an operation.
+      </p>
+      <p>
+        31.5 They allow for more flexible and dynamic programming patterns, such
+        as executing different actions depending on the outcome of a function or
+        operation.
+      </p>
+      <hr />
     </div>
     <!-- 32. Function returning Functions / Higher Order Functions -->
     <div>
-        <h2>32. Function returning Functions / Higher Order Functions</h2>
-        <p>32.1 In Javascript, functions can return other functions, which is a powerful concept known as "function
-            returning functions" or "higher-order functions". This allows for the creation of dynamic and specialized
-            functions based on the input or configuration provided. </p>
-        <p>32.2 It is useful when you need to create variations or customizations of a core functionality. They provide
-            a way to encapsulate behavior and create specialized function without duplicating code. </p>
-        <p>32.3 It facilitates code reuse, and contribute to a more expressive and functional programming style in
-            JavaScript. </p>
-        <hr>
+      <h2>32. Function returning Functions / Higher Order Functions</h2>
+      <p>
+        32.1 In Javascript, functions can return other functions, which is a
+        powerful concept known as "function returning functions" or
+        "higher-order functions". This allows for the creation of dynamic and
+        specialized functions based on the input or configuration provided.
+      </p>
+      <p>
+        32.2 It is useful when you need to create variations or customizations
+        of a core functionality. They provide a way to encapsulate behavior and
+        create specialized function without duplicating code.
+      </p>
+      <p>
+        32.3 It facilitates code reuse, and contribute to a more expressive and
+        functional programming style in JavaScript.
+      </p>
+      <hr />
     </div>
     <!-- 33. Important Array Methods -->
     <div>
-        <h2>33. Important Array Methods</h2>
-        <!-- 33.1 forEach() Method -->
-        <strong>33.1 forEach() Method</strong>
-        <p>33.1.1 forEach() method is a built-in method available on arrays. It allows you to iterate over the elements
-            of an array and perform a specified action for each element. </p>
-        <p>33.1.2 It takes a callback function as an argument, which will be executed for each element in the array. The
-            callback function can take up to three parameters: "currentValue", "index" (optional) and "array"(optional).
-        </p>
-        <p>33.1.3 It is important to note that the forEach() method does not return a value. It simply performs an
-            action for each element of the array. If you need to perform operations that accumulate a result or return a
-            new value, other array methods like "reduce()" might be more suitable.</p>
-        <p>33.1.4 Although forEach() method is a method available on arrays and it takes a callback function as an
-            argument, it does not meet the criteria of a higher-order function. </p>
-        <p>33.1.5 In javascript, an anonymous function is a function that does not have a name identifier. Instead of
-            assigning a name to a function, we can assign it directly to a variable, or pass it as an argument to
-            another function. </p>
-        <!-- 33.2 Map() Method / Higher Order Function -->
-        <strong>33.2 Map() Method / Higher Order Function</strong>
-        <p>33.2.1 The map() method in javascript is used to create a new array by applying a given function to each
-            element of an existing array. It iterates over each element of the array and executes the provided function
-            on each element, returning a new array with the result. </p>
-        <p>33.2.2 The map() method executes the provided function once for each element in the array, in ascending
-            order. It returns a new array containing the results of applying the function to each element. The original
-            array is not modified. </p>
-        <!-- 33.3 Filter() Method / Higher Order Function -->
-        <strong>33.3 Filter() Method / Higher Order Function</strong>
-        <p>33.3.1 The filter() method in javascript is used to create a new array that contains elements from an
-            existing array that satisfy a specified condition. It iterates over each element of the array and checks if
-            the provided function returns true for that element. If the function returns true, the element is included
-            in the new array, otherwise it is executed. </p>
-        <p>33.1.2 The filter() method does not modify the original array; it creates a new array with the filtered
-            elements. </p>
-        <p>33.1.3 It should always return a boolean value. It takes a callback function as an argument, which is called
-            on each element of the array. </p>
-        <!-- 33.4 Reduce() Method / Higher Order Function -->
-        <strong>33.4 Reduce() Method / Higher Order Function</strong>
-        <p>33.4.1 The reduce() method in javascript is used to reduce an array to single value by applying a specified
-            function to each element of the array. It iterates over the array and accumulates a value based on the
-            result of the function.</p>
-        <p>33.4.2 The reduce() method applies the callback function to each element of the array in a left-to right
-            order. It accumulates the result of each iteration into an accumulator value, which is passed as the first
-            argument of the callback function in the next iteration. The final result is the accumulated value after the
-            last iteration. </p>
-        <p>33.4.3 The reduce method can be use for various operations, such as calculating the sum, finding the maximum
-            or minimum value, concatenating strings, and more. The flexibility of the method allows you to perform
-            complex computations on arrays. </p>
-        <!-- 33.5 Sort() Method -->
-        <strong>33.5 Sort() Method</strong>
-        <p>33.5.1 The sort() method in javascript is used to sort the elements of an array in place, meaning it modifies
-            the original array. By default, it sorts the elements in ascending order based on their string
-            representations. However, you can provide a custom sorting function to define your own sorting criteria.</p>
-        <p>33.5.2 The sort() method rearranges the elements of the array in place according to the sorting criteria. It
-            compares elements pairwise and determines their relative order based on the return value of the
-            compareFunction.</p>
-        <p>33.5.3 The compareFunction should return a negative value if the first element should be sorted before the
-            second element, a positive value if the first element should be sorted after the second element, or 0 if the
-            two elements are equal and their order doesn't matter. </p>
-        <p>33.5.4 If (a-b) answer / output results in a positive number (i.e greater than 0, 0 is greater than number),
-            then b will be assign before a in an array.</p>
-        <p>33.5.5 If (b-a) answer / output results in a negative number (i.e smaller than 0, 0 is smaller than number),
-            then b will not be assign before a and will remain in the same old position in an array. </p>
-        <!-- 33.6 Find() Method / Higher Order Function -->
-        <strong>33.6 Find() Method / Higher Order Function</strong>
-        <p>33.6.1 The find() method in javascript is a higher-order function that is used to find the first element in
-            an array that satisfies a given condition. It returns the value of the first element that passed the
-            provided testing function.</p>
-        <p>33.6.2 The find() method iterates over each element in the array and calls the provided function for each
-            element until a match is found. Once the callback function returns true for an element, find() immediately
-            returns the value of that element. If no element satisfies the condition, find() returns undefined. </p>
-        <p>33.6.3 The find() method is useful when you need to retrieve a single element from an array based on a
-            specific condition.</p>
-        <!-- 33.7 Every() Method / Higher Order Function -->
-        <strong>33.7 Every() Method / Higher Order Function</strong>
-        <p>33.7.1 The every() method in javascript is a higher-order function that checks whether all elements in an
-            array satisfy a given condition. It returns true if the condition is true for every element in the array. If
-            any element fails the condition, it returns false. </p>
-        <p>33.7.2 It iterates over each element in the array and calls the provided function for each element. It checks
-            if the callback function returns true for every element. If any iteration returns false, the every() method
-            immediately returns false. If all iterations return true, the every() method returns true. </p>
-        <p>33.7.3 It is useful when you need to check if an certain condition is satisfied for all elements in an array.
-            It can be used to validate data or perform checks on multiple elements at once. </p>
-        <!-- 33.8 Some() Method / Higher Order Function -->
-        <strong>33.8 Some() Method / Higher Order Function</strong>
-        <p>33.8.1 The some() method in javascript is a higher-order function that checks whether at least one element in
-            an array satisfies a given condition. It returns true if the condition is true for at least one element in
-            the array. If none of the elements satisfy the condition, it returns false. </p>
-        <p>33.8.2 It is useful when you need to check if a certain condition is satisfied for at least one element in an
-            array.</p>
-        <!-- 33.9 Fill() Method -->
-        <strong>33.9 Fill() Method</strong>
-        <p>33.9.1 The fill() method in javascript is used to change all the elements in an array with a static value. It
-            modifies the original array by replacing its element with the specified value. It does not involve any
-            callback function.</p>
-        <p>33.9.2 This method is useful when you want to replace all or a portion of the elements in an array with a
-            specified value, such as initializing an array with a default value or resetting a portion of the array to a
-            known value. </p>
-        <!-- 33.10 Splice() Method -->
-        <strong>33.10. Splice() Method</strong>
-        <p>33.10.1 The splice() method in javascript is used to change the contents of an array by removing, replacing,
-            or adding elements. It modifies the original array and returns an array containing the removed elements, if
-            any. </p>
-        <p>33.10.2 The splice method modifies the array by removing elements specified by deleteCount starting from the
-            start index. It can also add new elements at the start index by including them as additional arguments. </p>
-        <p>33.10.3 This method is versatile and allows you to perform various modifications on an array, including
-            removing elements, inserting elements, or replacing elements at specific positions within the array. </p>
-        <hr>
+      <h2>33. Important Array Methods</h2>
+      <!-- 33.1 forEach() Method -->
+      <strong>33.1 forEach() Method</strong>
+      <p>
+        33.1.1 forEach() method is a built-in method available on arrays. It
+        allows you to iterate over the elements of an array and perform a
+        specified action for each element.
+      </p>
+      <p>
+        33.1.2 It takes a callback function as an argument, which will be
+        executed for each element in the array. The callback function can take
+        up to three parameters: "currentValue", "index" (optional) and
+        "array"(optional).
+      </p>
+      <p>
+        33.1.3 It is important to note that the forEach() method does not return
+        a value. It simply performs an action for each element of the array. If
+        you need to perform operations that accumulate a result or return a new
+        value, other array methods like "reduce()" might be more suitable.
+      </p>
+      <p>
+        33.1.4 Although forEach() method is a method available on arrays and it
+        takes a callback function as an argument, it does not meet the criteria
+        of a higher-order function.
+      </p>
+      <p>
+        33.1.5 In javascript, an anonymous function is a function that does not
+        have a name identifier. Instead of assigning a name to a function, we
+        can assign it directly to a variable, or pass it as an argument to
+        another function.
+      </p>
+      <!-- 33.2 Map() Method / Higher Order Function -->
+      <strong>33.2 Map() Method / Higher Order Function</strong>
+      <p>
+        33.2.1 The map() method in javascript is used to create a new array by
+        applying a given function to each element of an existing array. It
+        iterates over each element of the array and executes the provided
+        function on each element, returning a new array with the result.
+      </p>
+      <p>
+        33.2.2 The map() method executes the provided function once for each
+        element in the array, in ascending order. It returns a new array
+        containing the results of applying the function to each element. The
+        original array is not modified.
+      </p>
+      <!-- 33.3 Filter() Method / Higher Order Function -->
+      <strong>33.3 Filter() Method / Higher Order Function</strong>
+      <p>
+        33.3.1 The filter() method in javascript is used to create a new array
+        that contains elements from an existing array that satisfy a specified
+        condition. It iterates over each element of the array and checks if the
+        provided function returns true for that element. If the function returns
+        true, the element is included in the new array, otherwise it is
+        executed.
+      </p>
+      <p>
+        33.1.2 The filter() method does not modify the original array; it
+        creates a new array with the filtered elements.
+      </p>
+      <p>
+        33.1.3 It should always return a boolean value. It takes a callback
+        function as an argument, which is called on each element of the array.
+      </p>
+      <!-- 33.4 Reduce() Method / Higher Order Function -->
+      <strong>33.4 Reduce() Method / Higher Order Function</strong>
+      <p>
+        33.4.1 The reduce() method in javascript is used to reduce an array to
+        single value by applying a specified function to each element of the
+        array. It iterates over the array and accumulates a value based on the
+        result of the function.
+      </p>
+      <p>
+        33.4.2 The reduce() method applies the callback function to each element
+        of the array in a left-to right order. It accumulates the result of each
+        iteration into an accumulator value, which is passed as the first
+        argument of the callback function in the next iteration. The final
+        result is the accumulated value after the last iteration.
+      </p>
+      <p>
+        33.4.3 The reduce method can be use for various operations, such as
+        calculating the sum, finding the maximum or minimum value, concatenating
+        strings, and more. The flexibility of the method allows you to perform
+        complex computations on arrays.
+      </p>
+      <!-- 33.5 Sort() Method -->
+      <strong>33.5 Sort() Method</strong>
+      <p>
+        33.5.1 The sort() method in javascript is used to sort the elements of
+        an array in place, meaning it modifies the original array. By default,
+        it sorts the elements in ascending order based on their string
+        representations. However, you can provide a custom sorting function to
+        define your own sorting criteria.
+      </p>
+      <p>
+        33.5.2 The sort() method rearranges the elements of the array in place
+        according to the sorting criteria. It compares elements pairwise and
+        determines their relative order based on the return value of the
+        compareFunction.
+      </p>
+      <p>
+        33.5.3 The compareFunction should return a negative value if the first
+        element should be sorted before the second element, a positive value if
+        the first element should be sorted after the second element, or 0 if the
+        two elements are equal and their order doesn't matter.
+      </p>
+      <p>
+        33.5.4 If (a-b) answer / output results in a positive number (i.e
+        greater than 0, 0 is greater than number), then b will be assign before
+        a in an array.
+      </p>
+      <p>
+        33.5.5 If (b-a) answer / output results in a negative number (i.e
+        smaller than 0, 0 is smaller than number), then b will not be assign
+        before a and will remain in the same old position in an array.
+      </p>
+      <!-- 33.6 Find() Method / Higher Order Function -->
+      <strong>33.6 Find() Method / Higher Order Function</strong>
+      <p>
+        33.6.1 The find() method in javascript is a higher-order function that
+        is used to find the first element in an array that satisfies a given
+        condition. It returns the value of the first element that passed the
+        provided testing function.
+      </p>
+      <p>
+        33.6.2 The find() method iterates over each element in the array and
+        calls the provided function for each element until a match is found.
+        Once the callback function returns true for an element, find()
+        immediately returns the value of that element. If no element satisfies
+        the condition, find() returns undefined.
+      </p>
+      <p>
+        33.6.3 The find() method is useful when you need to retrieve a single
+        element from an array based on a specific condition.
+      </p>
+      <!-- 33.7 Every() Method / Higher Order Function -->
+      <strong>33.7 Every() Method / Higher Order Function</strong>
+      <p>
+        33.7.1 The every() method in javascript is a higher-order function that
+        checks whether all elements in an array satisfy a given condition. It
+        returns true if the condition is true for every element in the array. If
+        any element fails the condition, it returns false.
+      </p>
+      <p>
+        33.7.2 It iterates over each element in the array and calls the provided
+        function for each element. It checks if the callback function returns
+        true for every element. If any iteration returns false, the every()
+        method immediately returns false. If all iterations return true, the
+        every() method returns true.
+      </p>
+      <p>
+        33.7.3 It is useful when you need to check if an certain condition is
+        satisfied for all elements in an array. It can be used to validate data
+        or perform checks on multiple elements at once.
+      </p>
+      <!-- 33.8 Some() Method / Higher Order Function -->
+      <strong>33.8 Some() Method / Higher Order Function</strong>
+      <p>
+        33.8.1 The some() method in javascript is a higher-order function that
+        checks whether at least one element in an array satisfies a given
+        condition. It returns true if the condition is true for at least one
+        element in the array. If none of the elements satisfy the condition, it
+        returns false.
+      </p>
+      <p>
+        33.8.2 It is useful when you need to check if a certain condition is
+        satisfied for at least one element in an array.
+      </p>
+      <!-- 33.9 Fill() Method -->
+      <strong>33.9 Fill() Method</strong>
+      <p>
+        33.9.1 The fill() method in javascript is used to change all the
+        elements in an array with a static value. It modifies the original array
+        by replacing its element with the specified value. It does not involve
+        any callback function.
+      </p>
+      <p>
+        33.9.2 This method is useful when you want to replace all or a portion
+        of the elements in an array with a specified value, such as initializing
+        an array with a default value or resetting a portion of the array to a
+        known value.
+      </p>
+      <!-- 33.10 Splice() Method -->
+      <strong>33.10. Splice() Method</strong>
+      <p>
+        33.10.1 The splice() method in javascript is used to change the contents
+        of an array by removing, replacing, or adding elements. It modifies the
+        original array and returns an array containing the removed elements, if
+        any.
+      </p>
+      <p>
+        33.10.2 The splice method modifies the array by removing elements
+        specified by deleteCount starting from the start index. It can also add
+        new elements at the start index by including them as additional
+        arguments.
+      </p>
+      <p>
+        33.10.3 This method is versatile and allows you to perform various
+        modifications on an array, including removing elements, inserting
+        elements, or replacing elements at specific positions within the array.
+      </p>
+      <hr />
     </div>
     <!-- 34. Iterables -->
     <div>
-        <h2>34. Iterables</h2>
-        <p>34.1 An iterable object can be iterated over using a 'for of' loop or by using manually calling the 'next()'
-            method on the iterator. </p>
-        <p>34.2 Examples of iterator objects in javascript include arrays, string, maps, sets and generators. </p>
-        <p>34.3 It was introduced in ECMAScript 2015 (ES6) specifications, and it is a key feature of modern javascript
-            programming. </p>
-        <p>34.4 It allows developers to write code that can be iterate over collections of data in a consistent way,
-            regardless of the specific data type or structure.</p>
-        <p>34.5 In Javascript, we can iterate over iterables such as arrays, strings, maps, sets, and array-like objects
-            such as the arguments object and Node-list objects. </p>
-        <p>34.6 We cannot iterate over non-iterable data types such as numbers, boolean, null and undefined.</p>
-        <hr>
+      <h2>34. Iterables</h2>
+      <p>
+        34.1 An iterable object can be iterated over using a 'for of' loop or by
+        using manually calling the 'next()' method on the iterator.
+      </p>
+      <p>
+        34.2 Examples of iterator objects in javascript include arrays, string,
+        maps, sets and generators.
+      </p>
+      <p>
+        34.3 It was introduced in ECMAScript 2015 (ES6) specifications, and it
+        is a key feature of modern javascript programming.
+      </p>
+      <p>
+        34.4 It allows developers to write code that can be iterate over
+        collections of data in a consistent way, regardless of the specific data
+        type or structure.
+      </p>
+      <p>
+        34.5 In Javascript, we can iterate over iterables such as arrays,
+        strings, maps, sets, and array-like objects such as the arguments object
+        and Node-list objects.
+      </p>
+      <p>
+        34.6 We cannot iterate over non-iterable data types such as numbers,
+        boolean, null and undefined.
+      </p>
+      <hr />
     </div>
     <!-- 35. Array like Object -->
     <div>
-        <h2>35. Array like Object</h2>
-        <p>35.1 They have the length property. </p>
-        <p>35.2 They can be accessible with the help of indexes. </p>
-        <hr>
+      <h2>35. Array like Object</h2>
+      <p>35.1 They have the length property.</p>
+      <p>35.2 They can be accessible with the help of indexes.</p>
+      <hr />
     </div>
     <!-- 36. Sets -->
     <div>
-        <h2>36. Sets</h2>
-        <p>36.1 Sets are iterables in javascript.</p>
-        <p>36.2 A set is a built-in object that allows you to store unique value of any type, whether it is primitive
-            type values or object references. </p>
-        <p>36.3 A set does not allow duplicate values, so any given value can only appear once in a set. </p>
-        <p>36.4 Unlike arrays, sets do not use index-based access or have a length property. Instead, you can use
-            methods like add(), delete(), has(), and forEach() to work set elements. </p>
-        <hr>
+      <h2>36. Sets</h2>
+      <p>36.1 Sets are iterables in javascript.</p>
+      <p>
+        36.2 A set is a built-in object that allows you to store unique value of
+        any type, whether it is primitive type values or object references.
+      </p>
+      <p>
+        36.3 A set does not allow duplicate values, so any given value can only
+        appear once in a set.
+      </p>
+      <p>
+        36.4 Unlike arrays, sets do not use index-based access or have a length
+        property. Instead, you can use methods like add(), delete(), has(), and
+        forEach() to work set elements.
+      </p>
+      <hr />
     </div>
     <!-- 37. Maps -->
     <div>
-        <h2>37. Maps</h2>
-        <p>37.1 Maps are collections of key-value pairs, where each key is unique and associated with a corresponding
-            value.</p>
-        <p>37.2 They are useful for efficient key-based data retrieval and manipulation. </p>
-        <p>37.3 They are built-in data structures that provide different ways to store and manipulate collections of
-            data.</p>
-        <p>37.4 The keys and values in maps can be of any type. Maps provide methods for setting values, getting values,
-            checking if a key exists, and iterating over the key-value pairs. </p>
-        <hr>
+      <h2>37. Maps</h2>
+      <p>
+        37.1 Maps are collections of key-value pairs, where each key is unique
+        and associated with a corresponding value.
+      </p>
+      <p>
+        37.2 They are useful for efficient key-based data retrieval and
+        manipulation.
+      </p>
+      <p>
+        37.3 They are built-in data structures that provide different ways to
+        store and manipulate collections of data.
+      </p>
+      <p>
+        37.4 The keys and values in maps can be of any type. Maps provide
+        methods for setting values, getting values, checking if a key exists,
+        and iterating over the key-value pairs.
+      </p>
+      <hr />
     </div>
     <!-- 38. What is the difference between Sets and Maps? Can we use for-in loop in Sets, Maps or any other
             Iterables? -->
     <div>
-        <h2>38. What is the difference between Sets and Maps? Can we use for-in loop in Sets, Maps or any other
-            Iterables? </h2>
-        <p>38.1 Sets are collections of unique values without a specific order, whereas maps are collections of
-            key-value pairs that maintain the insertion order. Sets are suitable for managing unique values, while maps
-            are more appropriate when you need to associate values with specific keys. </p>
-        <p>38.2 No, it is not suitable to use a for-in loop in iterables in javascript. They are sequences of values. To
-            iterate over an iterable, you should use the forEach() method or the for-of loop. </p>
-        <p>38.3 The for-in loop is not suitable for iterating over iterables because it does not preserve the order of
-            the values. The for-of loop, on the other hand, does preserve the order of the values. </p>
-        <hr>
+      <h2>
+        38. What is the difference between Sets and Maps? Can we use for-in loop
+        in Sets, Maps or any other Iterables?
+      </h2>
+      <p>
+        38.1 Sets are collections of unique values without a specific order,
+        whereas maps are collections of key-value pairs that maintain the
+        insertion order. Sets are suitable for managing unique values, while
+        maps are more appropriate when you need to associate values with
+        specific keys.
+      </p>
+      <p>
+        38.2 No, it is not suitable to use a for-in loop in iterables in
+        javascript. They are sequences of values. To iterate over an iterable,
+        you should use the forEach() method or the for-of loop.
+      </p>
+      <p>
+        38.3 The for-in loop is not suitable for iterating over iterables
+        because it does not preserve the order of the values. The for-of loop,
+        on the other hand, does preserve the order of the values.
+      </p>
+      <hr />
     </div>
     <!-- 39. Clone using Object.assign() -->
     <div>
-        <h2>39. Clone using Object.assign()</h2>
-        <p>39.1 Object.assign() method is used to create a shallow copy or clone of an object. This method copies the
-            values of all enumerable properties from one or more source objects to a target object. </p>
-        <p>39.2 This method performs a shallow copy, which means that if the original object contains nested objects or
-            arrays, those nested objects will still be shared between the original object and the cloned object. </p>
-        <p>39.3 If you need a deep clone, where nested object are also cloned, you would need to use alternative methods
-            like JSON.parse(JSON.stringify(originalObj)) or libraries specifically designed for deep cloning objects.
-        </p>
-        <p>39.4 This only creates a new object with copied properties; it does not create a prototype chain or copy
-            non-enumerable properties or methods. </p>
-        <hr>
+      <h2>39. Clone using Object.assign()</h2>
+      <p>
+        39.1 Object.assign() method is used to create a shallow copy or clone of
+        an object. This method copies the values of all enumerable properties
+        from one or more source objects to a target object.
+      </p>
+      <p>
+        39.2 This method performs a shallow copy, which means that if the
+        original object contains nested objects or arrays, those nested objects
+        will still be shared between the original object and the cloned object.
+      </p>
+      <p>
+        39.3 If you need a deep clone, where nested object are also cloned, you
+        would need to use alternative methods like
+        JSON.parse(JSON.stringify(originalObj)) or libraries specifically
+        designed for deep cloning objects.
+      </p>
+      <p>
+        39.4 This only creates a new object with copied properties; it does not
+        create a prototype chain or copy non-enumerable properties or methods.
+      </p>
+      <hr />
     </div>
     <!-- 40. Optional Chaining "?" -->
     <div>
-        <h2>40. Optional Chaining "?" </h2>
-        <p>40.1 It is a feature that allows you to access properties or call methods on an object without having to
-            explicitly for the existence of the intermediate properties. </p>
-        <p>40.2 The optional chaining operator "?" is used to access properties or call methods on an object without
-            causing an error if any intermediate property is null or undefined. </p>
-        <p>40.3 It is supported in modern JavaScript environments, including Node.js and most modern browsers. However,
-            if you need to support older environments, you may need to transpile your code using tools like Babel to
-            ensure compatibility. </p>
-        <hr>
+      <h2>40. Optional Chaining "?"</h2>
+      <p>
+        40.1 It is a feature that allows you to access properties or call
+        methods on an object without having to explicitly for the existence of
+        the intermediate properties.
+      </p>
+      <p>
+        40.2 The optional chaining operator "?" is used to access properties or
+        call methods on an object without causing an error if any intermediate
+        property is null or undefined.
+      </p>
+      <p>
+        40.3 It is supported in modern JavaScript environments, including
+        Node.js and most modern browsers. However, if you need to support older
+        environments, you may need to transpile your code using tools like Babel
+        to ensure compatibility.
+      </p>
+      <hr />
     </div>
     <!-- 41. Methods -->
     <div>
-        <h2>41. Methods</h2>
-        <p>41.1 Methods functions inside the objects. </p>
-        <p>41.2 Methods are function that are associated with objects. </p>
-        <p>41.3 They are defined as properties of objects and can be invoked using the object's name followed by a dot
-            notation and the method name. </p>
-        <hr>
+      <h2>41. Methods</h2>
+      <p>41.1 Methods functions inside the objects.</p>
+      <p>41.2 Methods are function that are associated with objects.</p>
+      <p>
+        41.3 They are defined as properties of objects and can be invoked using
+        the object's name followed by a dot notation and the method name.
+      </p>
+      <hr />
     </div>
     <!-- 42. Window Object -->
     <div>
-        <h2>42. Window Object</h2>
-        <p>42.1 In JavaScript, 'window' object represents the global window in a web browser environment.</p>
-        <p>42.2 It is top-level object that contains the browser window or tab and serves as the global scope for
-            javascript code running in that window. </p>
-        <hr>
+      <h2>42. Window Object</h2>
+      <p>
+        42.1 In JavaScript, 'window' object represents the global window in a
+        web browser environment.
+      </p>
+      <p>
+        42.2 It is top-level object that contains the browser window or tab and
+        serves as the global scope for javascript code running in that window.
+      </p>
+      <hr />
     </div>
     <!-- 43. "use strict"; -->
     <div>
-        <h2>43. "use strict";</h2>
-        <p>Some of the key features and benefits of strict mode include: </p>
-        <p>43.1 Variable must be declared with 'var', 'let', or 'const' keyword. </p>
-        <p>43.2 Assigning a value to an undeclared variable, or deleting un-deletable properties, will throw an error.
-        </p>
-        <p>43.3 The this value in functions and constructors is undefined in strict mode when called without an explicit
-            context. </p>
-        <p>43.4 Disallows duplicate parameter names in function declaration and expression. </p>
-        <p>43.5 Octal numeric literals escape characters are not allowed. </p>
-        <p>43.6 The 'with' statement is not allowed. </p>
-        <hr>
+      <h2>43. "use strict";</h2>
+      <p>Some of the key features and benefits of strict mode include:</p>
+      <p>
+        43.1 Variable must be declared with 'var', 'let', or 'const' keyword.
+      </p>
+      <p>
+        43.2 Assigning a value to an undeclared variable, or deleting
+        un-deletable properties, will throw an error.
+      </p>
+      <p>
+        43.3 The this value in functions and constructors is undefined in strict
+        mode when called without an explicit context.
+      </p>
+      <p>
+        43.4 Disallows duplicate parameter names in function declaration and
+        expression.
+      </p>
+      <p>43.5 Octal numeric literals escape characters are not allowed.</p>
+      <p>43.6 The 'with' statement is not allowed.</p>
+      <hr />
     </div>
     <!-- 44. call() method -->
     <div>
-        <h2>44. call() method</h2>
-        <p>44.1 It is a way to borrow or set the context of a function explicitly. The call method is particularly
-            useful when you want to invoke a function with a specific context (value of 'this') that is different from
-            its original context or when you want to pass arguments individually instead of an array or object. </p>
-        <p>44.2 By calling call() method, you can explicitly set the 'this' value within a function and pass arguments
-            in a flexible manner. </p>
-        <p>43.3 The call() method in javascript is used to call a function with a specific value for this keyword. The
-            this keyword refers to the object that the function is being called on. By default, the this keyword refers
-            to the global object. However, you can use the call() method to specify a different value for this. </p>
-        <p>43.4 The call() method is a powerful tool that can be used to control the behavior of functions. It can be
-            used to call functions with different values for the this keyword, and it can be used to call functions that
-            are not defined on the current object. </p>
-        <hr>
+      <h2>44. call() method</h2>
+      <p>
+        44.1 It is a way to borrow or set the context of a function explicitly.
+        The call method is particularly useful when you want to invoke a
+        function with a specific context (value of 'this') that is different
+        from its original context or when you want to pass arguments
+        individually instead of an array or object.
+      </p>
+      <p>
+        44.2 By calling call() method, you can explicitly set the 'this' value
+        within a function and pass arguments in a flexible manner.
+      </p>
+      <p>
+        43.3 The call() method in javascript is used to call a function with a
+        specific value for this keyword. The this keyword refers to the object
+        that the function is being called on. By default, the this keyword
+        refers to the global object. However, you can use the call() method to
+        specify a different value for this.
+      </p>
+      <p>
+        43.4 The call() method is a powerful tool that can be used to control
+        the behavior of functions. It can be used to call functions with
+        different values for the this keyword, and it can be used to call
+        functions that are not defined on the current object.
+      </p>
+      <hr />
     </div>
     <!-- 45. apply() Method -->
     <div>
-        <h2>45. apply() Method</h2>
-        <p>45.1 It is a built-in function in JavaScript that allows you to invoke a function with a specified 'this'
-            value and argument provided as an array or array like object. </p>
-        <p>45.2 It is similar to call() method, but with the difference that the arguments are passed as an array rather
-            individually. </p>
-        <p>45.3 Note that starting from ES6, you can also use the spread syntax (`...`) to pass an array of arguments to
-            a function directly, which provides similar functionality to 'apply()' in a more concise way. </p>
-        <hr>
+      <h2>45. apply() Method</h2>
+      <p>
+        45.1 It is a built-in function in JavaScript that allows you to invoke a
+        function with a specified 'this' value and argument provided as an array
+        or array like object.
+      </p>
+      <p>
+        45.2 It is similar to call() method, but with the difference that the
+        arguments are passed as an array rather individually.
+      </p>
+      <p>
+        45.3 Note that starting from ES6, you can also use the spread syntax
+        (`...`) to pass an array of arguments to a function directly, which
+        provides similar functionality to 'apply()' in a more concise way.
+      </p>
+      <hr />
     </div>
     <!-- 46. bind() Method -->
     <div>
-        <h2>46. bind() Method</h2>
-        <p>46.1 It does not invoke the function immediately but returns a new function that when called has its 'this'
-            value set to the provided value. </p>
-        <p>46.2 This is useful when you want to create a new function that will be called later with a specified
-            context.</p>
-        <hr>
+      <h2>46. bind() Method</h2>
+      <p>
+        46.1 It does not invoke the function immediately but returns a new
+        function that when called has its 'this' value set to the provided
+        value.
+      </p>
+      <p>
+        46.2 This is useful when you want to create a new function that will be
+        called later with a specified context.
+      </p>
+      <hr />
     </div>
     <!-- 47. Object.create() -->
     <div>
-        <h2>47. Object.create()</h2>
-        <p>47.1 The Object.create() method is a built-in function in javascript that creates a new object with the
-            specified prototype object and properties.</p>
-        <p>47.2 It allows you to create objects based on a prototype, providing prototypal inheritance in javascript.
-        </p>
-        <p>47.3 The object.create() method creates a new object that inherits from the specified prototype object. It
-            does not invoke a constructor function like `new` does. It is a way to create objects based on any existing
-            object, allowing for prototypal inheritance. </p>
-        <p>47.4 This is useful when you want to create multiple objects with similar characteristics and behavior,
-            sharing common functionality through the prototype object. </p>
-        <p>47.5 So, while you can use simple assignment operator ("=") to create objects, it won't provide the same
-            level of control over the prototype as "Object.create()" does. </p>
-        <hr>
+      <h2>47. Object.create()</h2>
+      <p>
+        47.1 The Object.create() method is a built-in function in javascript
+        that creates a new object with the specified prototype object and
+        properties.
+      </p>
+      <p>
+        47.2 It allows you to create objects based on a prototype, providing
+        prototypal inheritance in javascript.
+      </p>
+      <p>
+        47.3 The object.create() method creates a new object that inherits from
+        the specified prototype object. It does not invoke a constructor
+        function like `new` does. It is a way to create objects based on any
+        existing object, allowing for prototypal inheritance.
+      </p>
+      <p>
+        47.4 This is useful when you want to create multiple objects with
+        similar characteristics and behavior, sharing common functionality
+        through the prototype object.
+      </p>
+      <p>
+        47.5 So, while you can use simple assignment operator ("=") to create
+        objects, it won't provide the same level of control over the prototype
+        as "Object.create()" does.
+      </p>
+      <hr />
     </div>
     <!-- 48. __proto__ = [[prototype]] = Object.getPrototypeOf() -->
     <div>
-        <h2>48. __proto__ = [[prototype]] = Object.getPrototypeOf()</h2>
-        <!-- 48.1 __proto__ (deprecated) -->
-        <strong>48.1 __proto__ (deprecated)</strong>
-        <p>48.1.1 It is a deprecated property that allows direct access to the prototype of an object. It provides a way
-            to get or set the prototype of an object, but it is not recommended to use it in modern javascript code.
-        </p>
-        <!-- 48.2 [[prototype]] (internal property) -->
-        <strong>48.2 [[prototype]] (internal property) </strong>
-        <p>48.2.1 It is an internal property of Javascript object that represents the object's prototype. It is not
-            directly accessible or modifiable in normal javascript code. </p>
-        <!-- 48.3 Object.getPrototypeOf() -->
-        <strong>48.3 Object.getPrototypeOf() </strong>
-        <p>48.3.1 It is a built-in method in javascript that returns the prototype of an object. It allows to get the
-            prototype of an object using the deprecated '__proto__' property. </p>
-        <hr>
+      <h2>48. __proto__ = [[prototype]] = Object.getPrototypeOf()</h2>
+      <!-- 48.1 __proto__ (deprecated) -->
+      <strong>48.1 __proto__ (deprecated)</strong>
+      <p>
+        48.1.1 It is a deprecated property that allows direct access to the
+        prototype of an object. It provides a way to get or set the prototype of
+        an object, but it is not recommended to use it in modern javascript
+        code.
+      </p>
+      <!-- 48.2 [[prototype]] (internal property) -->
+      <strong>48.2 [[prototype]] (internal property) </strong>
+      <p>
+        48.2.1 It is an internal property of Javascript object that represents
+        the object's prototype. It is not directly accessible or modifiable in
+        normal javascript code.
+      </p>
+      <!-- 48.3 Object.getPrototypeOf() -->
+      <strong>48.3 Object.getPrototypeOf() </strong>
+      <p>
+        48.3.1 It is a built-in method in javascript that returns the prototype
+        of an object. It allows to get the prototype of an object using the
+        deprecated '__proto__' property.
+      </p>
+      <hr />
     </div>
     <!-- 49. prototype property -->
     <div>
-        <h2>49. prototype property</h2>
-        <p>49.1 In javascript, every object has a property called 'prototype', which allows objects to inherit
-            properties and methods from other objects. The prototype property is a reference to an object, often
-            referred to as the object's prototype. </p>
-        <p>49.2 The prototype object serves as a blueprint or template for creating new objects. </p>
-        <p>49.3 When you access a property or method on an object, javascript first checks if that property or method
-            exists on the object itself. If it doesn't, it looks up the prototype chain to find the property or method
-            on the prototype object. </p>
-        <p>49.4 The 'prototype' property and the concept of prototypal inheritance are fundamental to javascript's
-            object oriented nature and allow for powerful and flexible code reuse and extension. </p>
-        <hr>
+      <h2>49. prototype property</h2>
+      <p>
+        49.1 In javascript, every object has a property called 'prototype',
+        which allows objects to inherit properties and methods from other
+        objects. The prototype property is a reference to an object, often
+        referred to as the object's prototype.
+      </p>
+      <p>
+        49.2 The prototype object serves as a blueprint or template for creating
+        new objects.
+      </p>
+      <p>
+        49.3 When you access a property or method on an object, javascript first
+        checks if that property or method exists on the object itself. If it
+        doesn't, it looks up the prototype chain to find the property or method
+        on the prototype object.
+      </p>
+      <p>
+        49.4 The 'prototype' property and the concept of prototypal inheritance
+        are fundamental to javascript's object oriented nature and allow for
+        powerful and flexible code reuse and extension.
+      </p>
+      <hr />
     </div>
     <!-- 50. Build-in function -->
     <div>
-        <h2>50. Build-in function</h2>
-        <p>50.1 In javascript, there are several built-in functions that are available as part of the javascript
-            language itself. These functions are provided by the javascript runtime environment and can be used without
-            the need for any additional setup or import. </p>
-        <p>50.2 Here are some examples of built in functions in javascript: console.log(), alert(), setTimeout(),
-            setInterval(), parseInt(), Math.random(), Math.max(), Math.min(), typeof(), etc. These are just few examples
-            of built-in functions, there are more built-in functions available in the javascript.</p>
-        <hr>
+      <h2>50. Build-in function</h2>
+      <p>
+        50.1 In javascript, there are several built-in functions that are
+        available as part of the javascript language itself. These functions are
+        provided by the javascript runtime environment and can be used without
+        the need for any additional setup or import.
+      </p>
+      <p>
+        50.2 Here are some examples of built in functions in javascript:
+        console.log(), alert(), setTimeout(), setInterval(), parseInt(),
+        Math.random(), Math.max(), Math.min(), typeof(), etc. These are just few
+        examples of built-in functions, there are more built-in functions
+        available in the javascript.
+      </p>
+      <hr />
     </div>
     <!-- 51. Difference between [[prototype]] and prototype -->
     <div>
-        <h2>51. Difference between [[prototype]] and prototype.</h2>
-        <!-- 51.1 [[prototype]] -->
-        <strong>51.1 [[prototype]]</strong>
-        <p>51.1.1 It is also known as the internal [[prototype]] property or dunder proto. It is an internal property of
-            an object that specifies its prototype. It is a reference to another object from which the object inherits
-            properties and methods. It forms the prototype chain, allowing objects to delegate property access and
-            method invocation to their prototype objects. You can access the [[Prototype]] of an object using the
-            `Object.getPrototype()` method or the `__proto__`. </p>
-        <!-- 51.2 prototype -->
-        <strong>51.2 prototype</strong>
-        <p>51.2.1 It is a property specific to functions in javascript. When you define a function, it automatically
-            gets a `prototype` property assigned to it. It is an object that is used as the prototype for objects
-            created by that function as a constructor. It is used for setting up inheritance in javascript. It is not
-            directly accessible from instances of the function but is accessed through the [[Prototype]] of the
-            instances. </p>
-        <p>51.3 To summarize, [[prototype]] is an internal property that determines the prototype of an object, while
-            prototype is a property specific to functions used for setting up inheritance by defining the prototype
-            object for objects created by the function. </p>
-        <hr>
+      <h2>51. Difference between [[prototype]] and prototype.</h2>
+      <!-- 51.1 [[prototype]] -->
+      <strong>51.1 [[prototype]]</strong>
+      <p>
+        51.1.1 It is also known as the internal [[prototype]] property or dunder
+        proto. It is an internal property of an object that specifies its
+        prototype. It is a reference to another object from which the object
+        inherits properties and methods. It forms the prototype chain, allowing
+        objects to delegate property access and method invocation to their
+        prototype objects. You can access the [[Prototype]] of an object using
+        the `Object.getPrototype()` method or the `__proto__`.
+      </p>
+      <!-- 51.2 prototype -->
+      <strong>51.2 prototype</strong>
+      <p>
+        51.2.1 It is a property specific to functions in javascript. When you
+        define a function, it automatically gets a `prototype` property assigned
+        to it. It is an object that is used as the prototype for objects created
+        by that function as a constructor. It is used for setting up inheritance
+        in javascript. It is not directly accessible from instances of the
+        function but is accessed through the [[Prototype]] of the instances.
+      </p>
+      <p>
+        51.3 To summarize, [[prototype]] is an internal property that determines
+        the prototype of an object, while prototype is a property specific to
+        functions used for setting up inheritance by defining the prototype
+        object for objects created by the function.
+      </p>
+      <hr />
     </div>
     <!-- 52. new keyword -->
     <div>
-        <h2>52. new keyword</h2>
-        <p>52.1 In javascript, the 'new' keyword is used to create an instance (object) of a constructor function. It is
-            typically used with constructor function to create new objects with the same structure and behavior. </p>
-        <p>52.2 When you use the new keyword with a constructor function, it creates an empty object. </p>
-        <p>52.3 It sets the [[Prototype]] of the newly created object to the 'prototype' property of the constructor
-            function. </p>
-        <p>52.4 It binds the newly created object as the value of 'this' within the constructor function.</p>
-        <p>52.5 The constructor function initializes the newly created object by assigning properties and methods to it
-            using the 'this' keyword. </p>
-        <p>52.6 While using the new keyword, it is important to define the constructor function properly, using the
-            capitalization convention (e.g. 'Person' instead of 'person'), to indicate that it should be used with the
-            'new' keyword as a constructor. </p>
-        <hr>
+      <h2>52. new keyword</h2>
+      <p>
+        52.1 In javascript, the 'new' keyword is used to create an instance
+        (object) of a constructor function. It is typically used with
+        constructor function to create new objects with the same structure and
+        behavior.
+      </p>
+      <p>
+        52.2 When you use the new keyword with a constructor function, it
+        creates an empty object.
+      </p>
+      <p>
+        52.3 It sets the [[Prototype]] of the newly created object to the
+        'prototype' property of the constructor function.
+      </p>
+      <p>
+        52.4 It binds the newly created object as the value of 'this' within the
+        constructor function.
+      </p>
+      <p>
+        52.5 The constructor function initializes the newly created object by
+        assigning properties and methods to it using the 'this' keyword.
+      </p>
+      <p>
+        52.6 While using the new keyword, it is important to define the
+        constructor function properly, using the capitalization convention (e.g.
+        'Person' instead of 'person'), to indicate that it should be used with
+        the 'new' keyword as a constructor.
+      </p>
+      <hr />
     </div>
     <!-- 53. hasOwnProperty() -->
     <div>
-        <h2>53. hasOwnProperty()</h2>
-        <p>53.1 The hasOwnProperty() method is a built-in method in javascript that is used to check if an object has
-            specific property.</p>
-        <p>53.2 It returns a boolean value indicating whether the object has the specified property as a
-            direct property of itself (not inherited from its prototype chain.) </p>
-        <hr>
+      <h2>53. hasOwnProperty()</h2>
+      <p>
+        53.1 The hasOwnProperty() method is a built-in method in javascript that
+        is used to check if an object has specific property.
+      </p>
+      <p>
+        53.2 It returns a boolean value indicating whether the object has the
+        specified property as a direct property of itself (not inherited from
+        its prototype chain.)
+      </p>
+      <hr />
     </div>
     <!-- 54. Only functions in javascript can have prototypes? -->
     <div>
-        <h2>54. Only functions in javascript can have prototypes?</h2>
-        <p>54.1 In javascript, all objects have a prototype, not just functions.</p>
-        <p>54.2 However, the "prototype" property is specially associated with the functions and is used to implement
-            inheritance. When a function is defined in JavaScript, it automatically gets a `prototype` property. </p>
-        <p>54.3 This prototype property is an object that is shared among all instances (objects) created using that
-            function as a constructor.</p>
-        <hr>
+      <h2>54. Only functions in javascript can have prototypes?</h2>
+      <p>
+        54.1 In javascript, all objects have a prototype, not just functions.
+      </p>
+      <p>
+        54.2 However, the "prototype" property is specially associated with the
+        functions and is used to implement inheritance. When a function is
+        defined in JavaScript, it automatically gets a `prototype` property.
+      </p>
+      <p>
+        54.3 This prototype property is an object that is shared among all
+        instances (objects) created using that function as a constructor.
+      </p>
+      <hr />
+    </div>
+    <!-- 55. class keyword -->
+    <div>
+      <h2>55. class keyword</h2>
+      <p>
+        55.1 The class keyword in JavaScript is used to define a class which is
+        blueprint for creating objects with a specific structure and behavior.
+      </p>
+      <p>
+        55.2 It was introduced in ECMAScript 2015 (ES6) to provide more familiar
+        syntax for working with objects and prototypes, especially for
+        developers coming from class-based languages.
+      </p>
+      <p>
+        55.3 In the class definition, you can declare a constructor method using
+        the "constructor" keyword, which is responsible for initializing the
+        object's properties when a new instance of class is created using the
+        new keyword.
+      </p>
+      <hr />
+    </div>
+    <!-- 56. extends keyword -->
+    <div>
+      <h2>56. extends keyword</h2>
+      <p>
+        56.1 In JavaScript, the extends keyword is used to create a subclass
+        properties and methods from a parent class.
+      </p>
+      <p>
+        56.2 It is a part of the syntax of ECMAScript 2015 (ES6) and provides a
+        straight forward way to implement inheritance.
+      </p>
+      <p>
+        56.3 Syntax : <br />
+        class ParentClass {// ParentClass properties and methods} <br />
+        class ChildClass extends ParentClass {}
+      </p>
+      <hr />
+    </div>
+    <!-- 57. super keyword -->
+    <div>
+      <h2>57. super keyword</h2>
+      <p>
+        57.1 In JavaScript, the super keyword is user to call the constructor or
+        methods of a parent class from within a subclass.
+      </p>
+      <p>
+        57.2 It is commonly used when working with inheritance to access and
+        invoke the parent class's functionality.
+      </p>
+      <p>
+        57.3 Here are two main uses of the "super" keyword: <br />
+        57.3.1 Calling the Parent Class constructor. <br />
+        57.3.2 Calling the Parent Class methods.
+      </p>
+      <hr />
+    </div>
+    <!-- 58. Constructors -->
+    <div>
+      <h2>58. Constructors</h2>
+      <p>
+        58.1 In JavaScript, constructors are special functions that are used for
+        creating and initializing objects. The are typically defined with
+        classes or function expressions and are invoked with the "new" keyword
+        to create new instances of the associated object.
+      </p>
+      <p>
+        58.2 It is important to note that constructors are regular function with
+        a few key differences: They have the same name as the class or function
+        expression, they don't have a return type. (the object is implicitly
+        returned) and they are called with the "new" keyword to create new
+        instances.
+      </p>
+      <hr />
     </div>
 
-
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

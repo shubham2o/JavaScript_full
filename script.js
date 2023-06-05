@@ -1993,3 +1993,107 @@ console.log(greetings.prototype); // 12.
 
 greetings.prototype.push("Jimmy Butler");
 console.log(greetings.prototype); // 13.
+
+
+console.log(`-------------- 55. class keyword --------------`)
+class CreateUser {
+    constructor (firstName, lastName, email, age, address) {
+        console.log(`CONSTRUCTOR CALLED`);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.address = address;
+    }
+    about() {
+        return `${this.firstName.toUpperCase()} is ${this.age} years old.`;
+    }
+    is18() {
+        return this.age >= 18;
+    }
+    sing() {
+        return `Hey ${this.lastName.toUpperCase()}, play a song for me. `;
+    }
+    func(a) {
+        return a;
+    }
+}
+console.log(CreateUser); // 1.
+
+const cnstrUser1 = new CreateUser("Elon", "Musk", "em@email.com", 53, 101010);
+console.log(cnstrUser1); // 2.
+console.log(Object.getPrototypeOf(cnstrUser1)); // 3.
+console.log(cnstrUser1.about()); // 4.
+console.log(cnstrUser1.is18()); // 5.
+console.log(cnstrUser1.sing()); // 6.
+console.log(cnstrUser1.func(2084)); // 7.
+
+const cnstrUser2 = new CreateUser("Kanye", "West", "kw@email.com", 47, 696969);
+console.log(cnstrUser2); // 8.
+console.log(Object.getPrototypeOf(cnstrUser2)); // 9.
+console.log(cnstrUser2.about()); // 10.
+console.log(cnstrUser2.is18()); // 11.
+console.log(cnstrUser2.sing()); // 12.
+console.log(cnstrUser2.func("string")); // 13.
+
+
+console.log(`-------------- 57. super keyword --------------`)
+class Animal {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        return `${this.name} is eating.`
+    }
+    isSuperCute() {
+        return this.age <=1;
+    }
+    isCute() {
+        return true;
+    }
+}
+console.log(Animal); // 1.
+
+class Dog extends Animal {
+    constructor (name, age, speed) {
+        super (name, age);
+        this.speed = speed;
+    }
+}
+console.log(Dog); // 2.
+
+const tommy = new Dog("Tommy", 3, 40);
+console.log(tommy); // 3.
+console.log(tommy.eat()); // 4.
+console.log(tommy.isSuperCute()); // 5.
+console.log(tommy.isCute()); // 6.
+console.log(tommy.speed); // 7.
+
+
+console.log(`-------------- 58. Constructors --------------`)
+class Animal1 {
+    constructor (name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        return `${this.name} is eating.`;
+    }
+}
+console.log(Animal1); // 1.
+
+class Doggo extends Animal1 {
+    constructor (name, age, speed) {
+        super(name, age);
+        this.speed = speed;
+    }
+    eat() {
+        return `MODIFIED EAT: ${this.name} is eating.`;
+    }
+}
+console.log(Doggo); // 2.
+
+const champ = new Doggo("Champ", 2, 37);
+console.log(champ); // 3.
+console.log(champ.eat()); // 4.
