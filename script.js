@@ -2097,3 +2097,92 @@ console.log(Doggo); // 2.
 const champ = new Doggo("Champ", 2, 37);
 console.log(champ); // 3.
 console.log(champ.eat()); // 4.
+
+
+console.log(`-------------- 59. Getters and Setters --------------`)
+class PersonGet {
+    constructor (firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    get personFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+console.log(PersonGet); // 1.
+
+const person1Get = new PersonGet("Harshit", "Sharma", 27);
+console.log(person1Get); // 2.
+console.log(person1Get.personFullName); // 3.
+// console.log(person1Get.personFullName());.
+
+class PersonGetSet {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    get personFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    set personFullName(fullName) {
+        const [fName, lName] = fullName.split(" ");
+        this.firstName = fName;
+        this.lastName = lName;
+    }
+}
+console.log(PersonGetSet); // 4.
+
+const person1GetSet = new PersonGetSet("Shubham", "Sharma", 23);
+console.log(person1GetSet); // 5.
+console.log(person1GetSet.firstName); // 6.
+console.log(person1GetSet.lastName); // 7.
+console.log(person1GetSet.personFullName); // 8.
+
+person1GetSet.personFullName = "Stephen Curry";
+console.log(person1GetSet.firstName); // 9.
+console.log(person1GetSet.lastName); // 10.
+console.log(person1GetSet.personFullName); // 11.
+
+person1GetSet.personFullName = "Stephen Wardell Curry";
+console.log(person1GetSet.firstName); // 12.
+console.log(person1GetSet.lastName); // 13.
+console.log(person1GetSet.personFullName); // 14.
+
+
+console.log(`-------------- 60. Static methods and properties --------------`)
+class PersonStaticMethod {
+    static classInfo() {
+        return `Inside the STATIC METHOD.`;
+    }
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+}
+console.log(PersonStaticMethod); // 1.
+console.log(PersonStaticMethod.classInfo()); // 2.
+
+const person1StaticMethod = new PersonStaticMethod("Lebron", "James", 38);
+console.log(person1StaticMethod); // 3.
+// console.log(person1StaticMethod.classInfo()); // 4.
+
+class PersonStaticProp {
+    static classInfo() {
+        return `Inside the STATIC METHOD.`;
+    }
+    static classProp = "INSIDE THE STATIC PROPERTY.";
+    constructor(firstName) {
+        this.firstName = firstName;
+    }
+}
+console.log(PersonStaticProp); // 5.
+console.log(PersonStaticProp.classInfo()); // 6.
+console.log(PersonStaticProp.classProp); // 7.
+
+const person1StaticProp = new PersonStaticProp("Michael");
+console.log(person1StaticProp); // 8.
+// console.log(person1StaticProp.classInfo()); // 9.
+console.log(person1StaticProp.classProp); // 10.
