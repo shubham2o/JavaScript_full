@@ -9,6 +9,56 @@
   </head>
 
   <body>
+    <!-- 1. How does JavaScript works? -->
+    <div>
+      <h2>1. How does JavaScript works?</h2>
+      <p>
+        1.1 JavaScript is an interpreted language, which means that it is not
+        compiled into machine code before it is executed. This makes JavaScript
+        slower than compiled languages, but it also makes it more flexible and
+        easier to debug.
+      </p>
+      <p>
+        1.2 JavaScript is a dynamically typed language, which means that the
+        type of a variable is not declared explicitly. This can make JavaScript
+        code more error-prone, but it also makes it more concise.
+      </p>
+      <p>
+        1.3 JavaScript is a single-threaded language, which means that only one
+        piece of JavaScript code can be executed at a time. This can make
+        JavaScript code less responsive, but it also makes it easier to write
+        correct code.
+      </p>
+      <p>
+        <strong>STEP 1: PARSER</strong> <br />
+        This is the first stage of the engine, every time we run a JavaScript
+        program, our code is first received by the "parser" inside the JS
+        engine. The parser's job is to check the JavaScript code for syntactic
+        errors in line by line manner because JavaScript is an interpretive
+        scripting language, so whenever an error is detected by the parser, it
+        throws a kind of error and stops execution of the code.
+      </p>
+      <p>
+        <strong>STEP 2: AST</strong> <br />
+        Once the parser checks all javascript codes and gets satisfied that
+        there are no mistakes/errors in the code, it creates the data structure
+        called AST (Abstract Syntax Tree).
+      </p>
+      <p>
+        <strong>STEP 3: CONVERSION TO MACHINE CODE</strong> <br />
+        Once the Abstract Syntax Tree is created by the parser, the JavaScript
+        engine converts the JavaScript code into the machine code (or in the
+        language that machine can understand).
+      </p>
+      <p>
+        <strong>STEP 4: MACHINE CODE</strong> <br />
+        When the program written in the JavaScript gets converted in the machine
+        language (or in the byte code), the converted code is sent to the system
+        for execution, and finally, that byte code run by the system / engine.
+      </p>
+      <hr />
+    </div>
+
     <script src="script1.js"></script>
   </body>
 </html>
