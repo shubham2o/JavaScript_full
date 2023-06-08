@@ -58,6 +58,109 @@
       </p>
       <hr />
     </div>
+    <!-- 2. Is JavaScript a Synchronous or Asynchronous programming language? -->
+    <div>
+      <h2>
+        2. Is JavaScript a Synchronous or Asynchronous programming language?
+      </h2>
+      <p>
+        2.1 JavaScript is a programming language that supports both synchronous
+        and asynchronous behavior. By default, JavaScript is single-threaded and
+        synchronous, meaning that code execution occurs in a sequential and
+        blocking manner. However, JavaScript also provides mechanisms to handle
+        asynchronous operations efficiently.
+      </p>
+      <p>
+        2.2 So, while JavaScript is primarily synchronous, it offers mechanisms
+        like callbacks, Promises, and async/await to handle asynchronous
+        operations effectively and avoid blocking the execution of other code.
+      </p>
+      <p>
+        2.3 Here is an example of synchronous code: <br />
+        function foo() { <br />
+        // Do something that takes a long time <br />
+        var result = 1000; <br />
+        // Do something else <br />
+        console.log(result); <br />
+        } <br />
+        This code will print the number 1000, but the user will have to wait for
+        the long-running task to complete before they can see the output.
+      </p>
+      <p>
+        2.4 Here is an example of asynchronous code: <br />
+        function foo() { <br />
+        // Do something that takes a long time <br />
+        var result = 1000; <br />
+        // Return a promise that will be resolved when the task is complete
+        return new Promise(function(resolve, reject) { <br />
+        // Do something else <br />
+        console.log(result); <br />
+        // Resolve the promise when the task is complete <br />
+        resolve(result); <br />
+        }); <br />
+        } <br />
+        This code will also print the number 1000, but the user will not have to
+        wait for the long-running task to complete before they can see the
+        output. This is because the code that prints the result is executed
+        asynchronously.
+      </p>
+      <hr />
+    </div>
+    <!-- 3. How does JavaScript executes code? -->
+    <div>
+      <h2>3. How does JavaScript executes code?</h2>
+      <p>
+        3.1 JavaScript code is executed by an engine, which is a program that
+        interprets and executed JavaScript instructions. The most widely used
+        JavaScript engine is the V8 engine, developed by Google, which powers
+        popular web browsers like Chrome and Node.js. The execution process of
+        JavaScript code involves several steps:
+      </p>
+      <p>
+        <strong>STEP 1: TOKENIZATION / LEXICAL ANALYSIS:</strong><br />
+        The engine breaks down the source code into individual tokens, such as
+        keywords, identifiers, operators, and literals. This step is known as
+        tokenization or lexical analysis.
+      </p>
+      <p>
+        <strong>STEP 2: PARSING / SYNTAX ANALYSIS:</strong><br />
+        The engine parses the tokens and constructs an Abstract Syntax Tree
+        (AST), representing the syntactic of the code. This step is known as
+        parsing or syntax analysis.
+      </p>
+      <p>
+        <strong>STEP 3: COMPILATION</strong><br />
+        The engine compiles the AST into executable code. Initially, the
+        compilation might involve generating an intermediate representation of
+        the code (such as bytecode) or optimizing the code for better
+        performance. Some engines also utilize Just-In-Time (JIT) compilation
+        techniques to further optimize the code.
+      </p>
+      <p>
+        <strong>STEP 4: EXECUTION</strong><br />
+        The compiled code is executed by the engine. The engine starts executing
+        the code from the entry point, typically the first line of the script.
+        It follows the control flow of the program, executing statements one by
+        one. Functions and blocks of code are executed when they are encountered
+        during the program's execution.
+      </p>
+      <p>
+        3.2 During the execution process, the engine also manages various
+        components, such as the execution context and the call stack:
+      </p>
+      <p>
+        <strong>EXECUTION CONTEXT: </strong><br />
+        An execution context is an environment where JavaScript code is
+        executed. It consists of variables, function declarations, the value of
+        'this', and other relevant information. Every time a function is called,
+        a new execution context is created, forming a stack-like structure known
+        as the execution context stack.
+      </p>
+      <p><strong>CALL STACK: </strong><br />
+      
+      </p>
+      <hr />
+    </div>
 
     <script src="script1.js"></script>
   </body>
