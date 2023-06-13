@@ -111,7 +111,7 @@
       <h2>3. How does JavaScript executes code?</h2>
       <p>
         3.1 JavaScript code is executed by an engine, which is a program that
-        interprets and executed JavaScript instructions. The most widely used
+        interprets and executes JavaScript instructions. The most widely used
         JavaScript engine is the V8 engine, developed by Google, which powers
         popular web browsers like Chrome and Node.js. The execution process of
         JavaScript code involves several steps:
@@ -156,8 +156,37 @@
         a new execution context is created, forming a stack-like structure known
         as the execution context stack.
       </p>
-      <p><strong>CALL STACK: </strong><br />
-      
+      <p>
+        <strong>CALL STACK: </strong><br />
+        The call stack is a data structure used by the JavaScript engine to keep
+        track of the currently executing functions. It follows the
+        Last-In-First-Out (LIFO) principle, meaning that the most recently
+        executed invoked function is always at the top of the stack. When a
+        function is called, a new execution context is created and pushed onto
+        the call stack. The JavaScript engine starts executing the statements
+        within the function's execution context.
+      </p>
+      <p>
+        If the function calls other functions, their execution contexts are also
+        pushed onto the stack, forming a stack frame for each function.
+      </p>
+      <p>
+        If the function completes its execution, its execution context is popped
+        off the call stack, and the control returns to the context of the
+        previous function.
+      </p>
+      <p>
+        This process continues until the call stack is empty, indicating that
+        all functions have finished executing. The call stack ensures that
+        function calls are executed in the order they are made and provides a
+        mechanism for managing the flow of execution and maintaining the correct
+        order of function contexts.
+      </p>
+      <p>
+        3.3 By managing the execution context and the call stack, the JavaScript
+        engine can keep track of the state of function execution, handle
+        variable scope and access, and ensure that functions are executed in the
+        correct order.
       </p>
       <hr />
     </div>
