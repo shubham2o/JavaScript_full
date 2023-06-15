@@ -190,6 +190,35 @@
       </p>
       <hr />
     </div>
+    <!-- 4. What is Temporal Dead Zone? -->
+    <div>
+      <h2>4. What is Temporal Dead Zone?</h2>
+      <p>
+        4.1 Temporal Dead Zone (TDZ) is a behavior in JavaScript that occurs
+        when accessing variables declared with 'let' and 'const' before they are
+        initialized. The TDZ concept was introduced in ECMAScript 2015 (ES6) as
+        part of the block-scoping mechanism.
+      </p>
+      <p>
+        4.2 In javascript, when a variable is declared using 'let' or 'const'
+        inside a block (such as a function or a pair of curly braces), the
+        variable is hoisted to the top of the block but remains uninitialized
+        until the declaration statement is encountered during runtime.
+      </p>
+      <p>
+        4.3 However, during the TDZ, attempting to access the variable before
+        its initialization will result in a runtime error.
+      </p>
+      <p>
+        4.4 The purpose of TDZ is to prevent accidental hoisting and making the
+        code more readable and maintainable. It is important to note that the
+        TDZ applies only to variables declared with 'let' and 'const', not to
+        variable declared with 'var'. Variables declared with 'var' are hoisted
+        to the top of their containing function or global scope, allowing them
+        to be accessed before their declaration.
+      </p>
+      <hr />
+    </div>
 
     <script src="script1.js"></script>
   </body>
