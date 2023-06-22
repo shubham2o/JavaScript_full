@@ -219,6 +219,34 @@
       </p>
       <hr />
     </div>
+    <!-- 5. async vs defer attribute -->
+    <div>
+      <h2>5. async vs defer attribute</h2>
+      <p>
+        5.1 The async and defer attributes are used to load JavaScript files
+        asynchronously, without blocking the rendering of the page. However,
+        there are some key differences between the two attributes.
+      </p>
+      <p>
+        5.2 Async: Scripts with the async attribute are executed as soon as they
+        are loaded, in no particular order. This means that the order of
+        execution of async scripts is not guaranteed, and they may execute
+        before or after scripts on the page.
+      </p>
+      <p>
+        5.3 Defer: Scripts with the defer attribute are executed after the page
+        has finished loading, in the order in which they appear in the HTML.
+        This means that the order of execution of defer scripts is guaranteed,
+        but they will not block the rendering of the page.
+      </p>
+      <p>
+        5.4 However, there are some cases where defer may be a better option.
+        For Example, if you have a script that needs to access the DOM, you
+        should use defer to ensure that the DOM is fully loaded before the
+        script is executed.
+      </p>
+      <hr />
+    </div>
 
     <script src="script1.js"></script>
   </body>
