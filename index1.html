@@ -271,6 +271,77 @@
       </p>
       <hr />
     </div>
+    <!-- 7. getAttribute() vs setAttribute() -->
+    <div>
+      <h2>7. getAttribute() vs setAttribute()</h2>
+      <p>
+        7.1 The getAttribute() and setAttribute() methods are used to get and
+        set attributes of an HTML element in JavaScript.
+      </p>
+      <p>
+        7.2 getAttribute() gets the value of an attribute of an HTML element.
+        The syntax is element.getAttribute(name), where name is the name of the
+        attribute. For Example, to get the value of the href attribute of an a
+        element, you would use the following code:
+      </p>
+      <p>var href = document.querySelector('a').getAttribute('href');</p>
+      <p>
+        7.3 setAttribute() sets the value of an attribute of an HTML element.
+        The syntax is element.setAttribute(name, value), where name is the name
+        of the attribute and value is the new value of the attribute. For
+        Example, to set the value of the href attribute of an a element to
+        https://www.google.com, you would use the following code:
+      </p>
+      <p>
+        document.querySelector('a').setAttribute('href',
+        'https://www.google.com');
+      </p>
+      <hr />
+    </div>
+    <!-- 8. getElementsByTagName() vs getElementsByClassName() -->
+    <div>
+      <h2>8. getElementsByTagName() vs getElementsByClassName()</h2>
+      <p>
+        8.1 The getElementsByTagName() and getElementsByClass() methods are used
+        to select elements in the DOM by their tag name and class name,
+        respectively.
+      </p>
+      <p>
+        8.2 getElementsByTagName() returns a collection of all elements with the
+        specified tag name. The syntax is
+        document.getElementsByTagName(tagName), where tagName is the name of the
+        tag. For Example, to get all the p elements in the document, you would
+        use the following code:
+      </p>
+      <p>let pElements = document.getElementsByTagName('p');</p>
+      <p>
+        8.3 getElementsByClassName() returns a collection of all elements with
+        the specified class name. The syntax is
+        document.getELementsByClassName(className), where className is the name
+        of the class. For Example, to get all the elements with the class name
+        "example", you would use the following code:
+      </p>
+      <p>let exampleElements = document.getElementsByClassName("example");</p>
+      <hr />
+    </div>
+    <!-- 9. Array.from() -->
+    <div>
+      <h2>9. Array.from()</h2>
+      <p>
+        9.1 The Array.from() method in JavaScript is a static method that
+        creates a new array from an iterable or array-like object. The iterable
+        can be anything that can iterated over, such as an array, a string, or a
+        list. The array-like object is an object that has a length property and
+        indexed elements.
+      </p>
+      <p>9.2 Array.from(iterable[, mapFn[, thisArg]])</p>
+      <p>9.3 It is a concise way to create new arrays.</p>
+      <p>
+        9.4 It is a powerful way to create new arrays from a variety of sources.
+      </p>
+      <p>9.5 It is a consistent way to create new arrays.</p>
+      <hr />
+    </div>
 
     <script src="script1.js"></script>
   </body>
