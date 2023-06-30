@@ -342,6 +342,67 @@
       <p>9.5 It is a consistent way to create new arrays.</p>
       <hr />
     </div>
+    <!-- 10. When to use appendChild() and innerHTML? -->
+    <div>
+      <h2>10. When to use appendChild() and innerHTML?</h2>
+      <p>
+        10.1 innerHTMl and appendChild() are both methods used to manipulate the
+        DOM (Document Object Model) in JavaScript. However, they have different
+        purposes and should be used in different situations.
+      </p>
+      <p>
+        10.2 innerHTML is used to set the inner HTML of an element. This means
+        that it can be used to replace the existing content of an element with
+        new HTMl. For Example, the following code would replace the content of
+        the div element with a new p element:
+      </p>
+      <p>
+        const div = document.querySelector('div');
+        <br />
+        div.innerHTMl = 'p This is new content /p';
+      </p>
+      <p>
+        10.3 appendChild() is used to append a new node to the end of a parent
+        node. This means that it can be used to add new elements to the DOM. For
+        example, the following code would append a new p element to the end of
+        the div element:
+      </p>
+      <p>
+        const div = document.querySelector('div');
+        <br />
+        const p = document.createElement('p');
+        <br />
+        p.innerHTML = 'This is new content';
+        <br />
+        div.appendChild(p);
+      </p>
+      <p>
+        10.4 When to use innerHTML -
+        <br />
+        10.4.1 When you need to replace the existing content of an element with
+        new HTMl.
+        <br />
+        10.4.2 When you need to insert dynamic content into the DOM.
+        <br />
+        10.4.3 When you need to perform a complex manipulation of the DOM that
+        would be difficult or inefficient to do with appendChild().
+      </p>
+      <p>
+        10.5 When to use appendChild() -
+        <br />
+        10.5.1 When you need to add a new element to the DOM.
+        <br />
+        10.5.2 When you need to maintain the existing structure of the DOM.
+        <br />
+        10.5.3 When you need to perform a simple manipulation of the DOM that
+        can be done more efficiently with appendChild() than with innerHTML.
+      </p>
+      <p>
+        10.6 In general, appendChild() is the preferred method for manipulating
+        the DOM. However, innerHTML can be useful in some situations.
+      </p>
+      <hr />
+    </div>
 
     <script src="script1.js"></script>
   </body>
