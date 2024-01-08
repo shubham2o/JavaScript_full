@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Revision</title>
+    <script src="revision.js" defer></script>
   </head>
   <body>
     <p>
@@ -12,29 +13,255 @@
       refers to the global object, the owner of the function. But when the mode
       is “strict”, it is undefined.
     </p>
+    <hr />
     <p>
       1. The call() method calls a function with a given this value and
       arguments provided individually.
     </p>
+    <hr />
     <p>
       2. The apply() method calls a function with a given this value, and
       arguments provided as an array (or an array-like object).
     </p>
+    <hr />
     <p>
       3. The bind() method creates a new function that, when called, has its
       this keyword set to the provided value, with a given sequence of arguments
       preceding any provided when the new function is called.
     </p>
+    <hr />
     <p>
       4. When our code is repetitive, most of the time we can do better. Enter
       the powers of call, apply, and bind. Call, apply, and bind are JavaScript
       methods that allow a single function to be used on multiple objects.
     </p>
+    <hr />
     <p>
       5. Polyfill for Call, Apply, and Bind method. Polyfill is a sort of
       browser fallback. What if suppose your browser have or support call, apply
       and bind function, then polyfills helps to write your own call, apply,
       bind function.
+    </p>
+    <hr />
+    <p>
+      --- Javascript is a synchronous and single-threaded language, but it can
+      convert into asynchronous language.
+    </p>
+    <hr />
+    <p>
+      --- setTimeout and setInterval are provided by browser, they both are an
+      API.
+    </p>
+    <hr />
+    <p>
+      --- Callback refers to when a function takes another function an as
+      argument and return it as an output.
+    </p>
+    <hr />
+    <p>
+      --- Callback hell is callback inside callback inside callback inside
+      callback and so on... To escape this, there are two ways in javascript ---
+      1. Promises,,, and 2. async/await.
+    </p>
+    <hr />
+    <p>
+      --- Promise is a value which we don't know now in present but will surely
+      know in the future. Promise is a constructor function. In promise we pass
+      a function which is known an executor function which takes two parameters
+      i.e., resolve, reject.
+    </p>
+    <hr />
+    <p>
+      --- The microtask queue and callback queue are two queues used by the
+      JavaScript event loop to execute asynchronous tasks.
+    </p>
+    <hr />
+    <p>
+      --- Microtask queue is a high-priority queue that is processed before the
+      callback queue. This means that microtask are executed as soon as
+      possible, even if there are other tasks waiting in the callback queue.
+      Microtask typically include tasks such as mutation observers and Promise
+      resolution.
+    </p>
+    <hr />
+    <p>
+      --- Callback queue is a lower-priority queue that is processed after the
+      microtask queue is empty. This means that callback tasks are executed
+      after all microtask have completed. Callback tasks typically include tasks
+      such as setTimeout and setInterval.
+    </p>
+    <hr />
+    <p>
+      --- In simple words, the microtask queue is for tasks that need to be
+      executed immediately, while the callback queue is for tasks that can wait
+      a little longer.
+    </p>
+    <hr />
+    <p>--- then method always returns a promise.</p>
+    <hr />
+    <p>
+      --- HTTP request / AJAX request / API call / AJAX is the medium to
+      interact in between client and server.
+    </p>
+    <hr />
+    <p>
+      --- AJAX is a set of web development techniques which we use on the client
+      side to create asynchronous web applications. For example, we want to read
+      some data or we want to get some data from the server, so in this case we
+      can request HTTP and browser does this for us asynchronously in the
+      background without letting us know.
+    </p>
+    <hr />
+    <p>
+      --- With Ajax, web applications can send and retrieve data from a server
+      asynchronously (in the background) without interfering with the display
+      and behavior of the existing page.
+    </p>
+    <hr />
+    <p>--- We don't use data in XML format anymore. We use JSON now.</p>
+    <hr />
+    <p>
+      --- We have 3 most common ways to create and send request to server --- 1.
+      xmlHTTPRequest (old way of doing),,, 2. fetch API (new way of doing),,,
+      and 3. axios (this is third party library)
+    </p>
+    <hr />
+    <p>
+      --- JSON.parse() is used to convert JSON String file into Javascript
+      Object.
+    </p>
+    <hr />
+    <p>
+      --- fetch() will by default send request to the server on its own without
+      manually typing all the code, like we use to do in XML. fetch() will
+      return or give a Promise as an output. fetch() will only reject when we
+      will get network related errors, i.e., onerror.
+    </p>
+    <hr />
+    <p>--- You can remove the use of .then() using async and await.</p>
+    <hr />
+    <p>
+      --- If you write async before a function in javascript, then it no will
+      longer be a normal function. Now, it will every time return or give a
+      Promise as an output when it is invoked or called.
+    </p>
+    <hr />
+    <p>
+      --- Variables are used to store data, values in javascript. They can store
+      various data of various datatype.
+    </p>
+    <hr />
+    <p>
+      --- Variables and functions are hoisted which means that there declaration
+      is moved on top of the code. We can access the value of a variable
+      declared using var before it has been initialized and initialized.
+    </p>
+    <hr />
+    <p>
+      --- 7 Primitive Data Types are string, number, BigInt, null, undefined,
+      boolean and symbol. Primitive data types are fixed, they cannot be
+      changed. Values are passed by value.
+    </p>
+    <hr />
+    <p>
+      --- 3 Reference Data Types are [Arrays], {Objects}, and (Functions).
+      Reference data types are variable, they can be changed easily. Values are
+      passed by reference.
+    </p>
+    <hr />
+    <p>
+      --- We can store only a single value in a variable, but if we want to
+      store multiple values in a variable of different data types then we can do
+      so with the help of an Array. In short, arrays are group of values.
+    </p>
+    <hr />
+    <p>
+      --- let and const are block scoped {}, var is function scoped (). var adds
+      itself to the window object. let and const are introduced in ES6 (2015)
+      while var is from previous version i.e., ES5 (2009) or earlier.
+    </p>
+    <hr />
+    <p>
+      --- Javascript does not have all the features, and some of the features
+      which we uses are coming directly from the window browser object as
+      javascript does not have all of them. Some of the features are alert(),
+      prompt(), console(), setInterval(), setTimeout(), clearInterval(),
+      clearTimeout(), document, fetch(), and etc.
+    </p>
+    <hr />
+    <p>
+      --- Spread Operator helps to copy the values of the variables of Reference
+      Data Types.
+    </p>
+    <hr />
+    <p>--- Falsy values are 0, null, undefined, false, NaN, document.all</p>
+    <hr />
+    <p>
+      --- forEach loop in javascript only works on an array. This means that
+      whenever you have an array, then forEach loop comes into use. By default,
+      forEach() method never changes the value of the original array. It makes
+      changes on the temporary copy the original array which makes the original
+      array unchanged or same.
+    </p>
+    <hr />
+    <p>
+      --- Function Expressions in JavaScript are first class functions. This
+      means that functions can be treated as values in JavaScript. They can be
+      passed as arguments to other functions, they can be returned from
+      functions, and they can be stored in variables.
+    </p>
+    <hr />
+    <p>
+      --- Higher Order Function are the function which accepts functions in a
+      parameter or return a function or both.
+    </p>
+    <hr />
+    <p>
+      --- When you want to create many objects with the same properties and
+      methods, then in this case you can use the Constructor function.
+    </p>
+    <hr />
+    <p>
+      --- Whenever a new keyword is used in javascript, just create an imaginary
+      object in your mind. This means that a new object will sooner be created
+      because of usage of the new keyword.
+    </p>
+    <hr />
+    <p>
+      --- Immediately Invoked Function Expression is a special type of function
+      expression in JavaScript that is executed immediately after it is defined.
+      The function() keyword defines the IIFE, and the () parentheses execute
+      the IIFE immediately. The {} curly braces contain the code that should be
+      executed once. This function helps us to create a private variables which
+      are not accessible anywhere outside of their scope.
+    </p>
+    <hr />
+    <p>
+      --- Prototype is basically the collection of built-in functions and
+      methods that is available in JavaScript for us to use.
+    </p>
+    <hr />
+    <p>--- Function inside an object is known as Method.</p>
+    <hr />
+    <p>
+      --- When you want to run a function in which the value of this is
+      something else but you want the value of this to be some other object,
+      then in this case call(), apply(), and bind() method are used.
+    </p>
+    <hr />
+    <p>
+      --- In javascript, both synchronous and asynchronous code gets processed
+      side by side at the same time, this is known as concurrency.
+    </p>
+    <hr />
+    <p>
+      --- Parallelism focuses more on the different processors and on its cores.
+    </p>
+    <hr />
+    <p>
+      --- Polyfill is a kind of browser fallback, lets say your browser doesn't
+      support call, apply, bind method, then you'll have to use polyfill to
+      implement these methods.
     </p>
   </body>
 </html>

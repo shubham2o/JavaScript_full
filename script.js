@@ -872,6 +872,7 @@ function myApp() {
     function myFunc() {
         console.log(`inside the myFunc, ${myVar}`);
     }
+
     console.log(myVar);
     myFunc();
 }
@@ -884,6 +885,7 @@ function myApp1() {
         const myVar1 = "value59";
         console.log(`inside the myFunc, ${myVar1}`);
     }
+
     console.log(myVar1);
     myFunc();
 }
@@ -1036,6 +1038,7 @@ restFunc(100, 200, 300, 400, 500, 600);
 /* The output of ...c (rest parameter) will be an array. It will not show in array 
 because we have used string template while console.log and we know that anything / 
 any data-type + string will always results in string. */
+
 
 function addAll(...numbers) {
     let total = 0;
@@ -1997,7 +2000,7 @@ console.log(greetings.prototype); // 13.
 
 console.log(`-------------- 55. class keyword --------------`)
 class CreateUser {
-    constructor (firstName, lastName, email, age, address) {
+    constructor(firstName, lastName, email, age, address) {
         console.log(`CONSTRUCTOR CALLED`);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -2047,7 +2050,7 @@ class Animal {
         return `${this.name} is eating.`
     }
     isSuperCute() {
-        return this.age <=1;
+        return this.age <= 1;
     }
     isCute() {
         return true;
@@ -2056,8 +2059,8 @@ class Animal {
 console.log(Animal); // 1.
 
 class Dog extends Animal {
-    constructor (name, age, speed) {
-        super (name, age);
+    constructor(name, age, speed) {
+        super(name, age);
         this.speed = speed;
     }
 }
@@ -2073,7 +2076,7 @@ console.log(tommy.speed); // 7.
 
 console.log(`-------------- 58. Constructors --------------`)
 class Animal1 {
-    constructor (name, age) {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
@@ -2084,7 +2087,7 @@ class Animal1 {
 console.log(Animal1); // 1.
 
 class Doggo extends Animal1 {
-    constructor (name, age, speed) {
+    constructor(name, age, speed) {
         super(name, age);
         this.speed = speed;
     }
@@ -2101,7 +2104,7 @@ console.log(champ.eat()); // 4.
 
 console.log(`-------------- 59. Getters and Setters --------------`)
 class PersonGet {
-    constructor (firstName, lastName, age) {
+    constructor(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
